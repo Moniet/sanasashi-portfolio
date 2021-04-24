@@ -62,7 +62,7 @@ const SliderImage = ({
             position="relative"
             pr="sm"
             height="100%"
-            width="450px"
+            width={['250px', '250px', '350px', '400px']}
             color="text"
           >
             <Img src={imageLink} ref={image} />

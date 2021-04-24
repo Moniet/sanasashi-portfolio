@@ -12,6 +12,7 @@ const Layout = ({ children }) => (
       p="65px"
       pb="0px"
       position="relative"
+      overflowX="hidden"
     >
       <Nav />
       {children}

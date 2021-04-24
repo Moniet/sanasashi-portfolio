@@ -23,7 +23,7 @@ const SliderContainer = styled.div`
   display: flex;
   width: 100%;
   max-width: 100%;
-  height: min(100%, 800px);
+  height: min(100%, 600px);
   overflow: visible;
   align-items: center;
   transition: transform 0.5s ease;

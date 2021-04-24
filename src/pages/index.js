@@ -13,9 +13,9 @@ export default function Home() {
       <Flex height="100%" width="100%" alignItems="center">
         <Flex flexDirection="column" flex="1" pr="md">
           <Text as="h1" fontSize="gigantic" fontWeight="200">
-            My
+            MY
             <br />
-            Work
+            WORK
           </Text>
           <Text fontSize="xxs">
             I’m a UX Designer crafting User-Centric products through Minimal,
