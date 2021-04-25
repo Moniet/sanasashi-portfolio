@@ -24,7 +24,6 @@ export default function Home() {
         </Flex>
         <Slider />
       </Flex>
-      <Footer />
     </Layout>
   )
 }
