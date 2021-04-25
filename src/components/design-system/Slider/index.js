@@ -45,7 +45,7 @@ const ScrollbarContainer = styled.div`
 const ScrollThumb = styled.div`
   background: #797979;
   height: 100%;
-  width: ${({ noOfItems }) => scrollbarWidth / (noOfItems - 2) + 'px'};
+  width: ${({ noOfItems }) => scrollbarWidth / noOfItems + 'px'};
   border-radius: 20px;
   transition: transform 0.3s ease;
 `
@@ -56,12 +56,17 @@ const Controls = styled.button`
   outline: none;
 `
 
-const Scrollbar = ({ noOfItems = 4, count }) => {
+const Scrollbar = ({
+  noOfItems = () => new Error("'noOfItems' not defined"),
+  count,
+}) => {
   return (
     <ScrollbarContainer>
       <ScrollThumb
         noOfItems={noOfItems}
-        style={{ transform: `translateX(${scrollbarWidth * (count / 10)}px` }}
+        style={{
+          transform: `translateX(${(scrollbarWidth / noOfItems) * count}px`,
+        }}
       />
     </ScrollbarContainer>
   )
@@ -127,7 +132,11 @@ const Slider = () => {
         <Box pr="md" color="text">
           {count < 9 ? '0' + (count + 1) : count + 1}
         </Box>
-        <Scrollbar container={container} count={count} />
+        <Scrollbar
+          container={container}
+          noOfItems={sliderItems.length}
+          count={count}
+        />
         <Flex ml="md" mb="-0.5rem">
           <Controls>
             <LeftArrow

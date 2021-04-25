@@ -21,9 +21,12 @@ const Tags = ({ tags = ['No tags :('], hovering = false }) => (
       {tags.map((tag, i) => (
         <Box
           opacity="0"
-          style={{ '--opacity': hovering ? 1 : 0 }}
+          style={{
+            '--opacity': hovering ? 1 : 0,
+            transform: 'translateX(0px)',
+          }}
           css={{
-            transform: hovering ? 'translateX(10px)' : 'translateX(0px)',
+            transform: 'translateX(10px)',
             transitionDelay: `${i / 100 || 0}s`,
             transition: 'transform 0.5s ease, opacity 0.5 ease',
             opacity: 'var(--opacity)',
