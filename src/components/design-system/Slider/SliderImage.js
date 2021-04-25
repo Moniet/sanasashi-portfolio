@@ -53,7 +53,7 @@ const SliderImage = ({
         <a>
           <Flex
             position="relative"
-            height="100%"
+            height={['380px', '400px', '450px', '480px', '500px']}
             width={['250px', '250px', '350px', '400px']}
             color="text"
           >
