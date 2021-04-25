@@ -22,14 +22,12 @@ const Tags = ({ tags = ['No tags :('], hovering = false }) => (
         <Box
           opacity="0"
           style={{
-            '--opacity': hovering ? 1 : 0,
-            transform: 'translateX(0px)',
+            opacity: hovering ? 1 : 0,
+            transform: hovering ? 'translateY(0px)' : 'translateY(20px)',
           }}
           css={{
-            transform: 'translateX(10px)',
-            transitionDelay: `${i / 100 || 0}s`,
-            transition: 'transform 0.5s ease, opacity 0.5 ease',
-            opacity: 'var(--opacity)',
+            transitionDelay: `${i * 100}ms`,
+            transition: 'transform 0.5s ease, opacity 0.5s ease',
           }}
         >
           <Text
