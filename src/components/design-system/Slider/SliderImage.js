@@ -24,8 +24,6 @@ const Tags = ({ tags = ['No tags :('], hovering = false }) => (
           style={{
             opacity: hovering ? 1 : 0,
             transform: hovering ? 'translateY(0px)' : 'translateY(20px)',
-          }}
-          css={{
             transitionDelay: `${i * 100}ms`,
             transition: 'transform 0.5s ease, opacity 0.5s ease',
           }}
