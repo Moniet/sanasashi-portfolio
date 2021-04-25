@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { themeGet } from '@styled-system/theme-get'
 import Link from 'next/link'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Box from '../../helpers/Box'
 import Flex from '../../helpers/Flex'
 import Text from '../../helpers/Text'
@@ -15,13 +15,32 @@ const Img = styled.img`
   z-index: 0;
 `
 
-const Tags = ({ tags = ['No tags :('] }) => (
-  <Box position="absolute" top="0" left="0" width="100%" pr="md" pt="sm">
+const Tags = ({ tags = ['No tags :('], hovering = false }) => (
+  <Box position="absolute" top="0" left="0" width="100%" pr="sm" pt="sm">
     <Flex flexDirection="column">
       {tags.map((tag, i) => (
-        <Text key={i} color="text" textAlign="right" p="0" m="0" lineHeight="1">
-          {tag}
-        </Text>
+        <Box
+          opacity="0"
+          style={{ '--opacity': hovering ? 1 : 0 }}
+          css={{
+            transform: hovering ? 'translateX(10px)' : 'translateX(0px)',
+            transitionDelay: `${i / 100 || 0}s`,
+            transition: 'transform 0.5s ease, opacity 0.5 ease',
+            opacity: 'var(--opacity)',
+          }}
+        >
+          <Text
+            key={i}
+            color="text"
+            fontSize="xxs"
+            textAlign="right"
+            p="0"
+            m="0"
+            lineHeight="1"
+          >
+            {tag}
+          </Text>
+        </Box>
       ))}
     </Flex>
   </Box>
@@ -38,6 +57,7 @@ const SliderImage = ({
 }) => {
   const image = useRef(null)
   const overlay = useRef(null)
+  const [hovering, setHovering] = useState(false)
 
   return (
     <Box
@@ -48,6 +68,8 @@ const SliderImage = ({
         transition: 0.5s ease transform;
       `}
       style={{ '--scale': count === index ? 1 : 0.9 }}
+      onMouseOver={() => setHovering(true)}
+      onMouseLeave={() => setHovering(false)}
     >
       <Link href={projectLink} passHref>
         <a>
@@ -67,16 +89,30 @@ const SliderImage = ({
               ref={overlay}
             />
             <Img src={imageLink} ref={image} />
-            <Tags tags={tags} />
+            <Tags tags={tags} hovering={hovering} />
             <Box
               position="absolute"
               bottom="0"
               left="0"
+              maxWidth="fit-content"
               css={{
-                transform:
-                  'rotate(-90deg) translateY(-50%) translateX(calc(25% + 1rem))',
+                transform: 'rotate(-180deg) translateY(10px)',
+                writingMode: 'vertical-lr',
+                transition: 'opacity 0.5s ease, transform 0.5s ease',
+              }}
+              opacity="0"
+              style={{
+                opacity: hovering ? 1 : 0,
+                transform: hovering
+                  ? 'rotate(-180deg) translateY(0px)'
+                  : 'rotate(-180deg) translateY(10px)',
               }}
             >
+              <Box mr="-20px">
+                <Text as="div" textAlign="right">
+                  <Text as="small">{year}</Text>
+                </Text>
+              </Box>
               <Text
                 as="h2"
                 fontSize="gigantic"

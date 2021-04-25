@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Footer from '../../components/design-system/Footer'
 import Layout from '../../components/design-system/Layout'
 import Flex from '../../components/helpers/Flex'
@@ -5,6 +6,9 @@ import Text from '../../components/helpers/Text'
 
 const About = () => (
   <Layout>
+    <Head>
+      <title>Work | Sanjana Sashi | UX Designer</title>
+    </Head>
     <Flex width="100%" height="100%" pt="xl" px="xl" flexDirection="column">
       <Flex>
         <Flex mr="lg" flex="4">

@@ -70,6 +70,7 @@ const Scrollbar = ({ noOfItems = 4, count }) => {
 const sliderItems = [
   {
     imageLink: '/images/slider/p1.png',
+    title: 'Mirror',
   },
   {
     imageLink: '/images/slider/p2.png',

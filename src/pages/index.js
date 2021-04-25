@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Box from '../components/helpers/Box'
 import Nav from '../components/design-system/Nav'
 import Flex from '../components/helpers/Flex'
@@ -10,6 +11,9 @@ import Footer from '../components/design-system/Footer'
 export default function Home() {
   return (
     <Layout>
+      <Head>
+        <title>Sanjana Sashikumar | UX Designer</title>
+      </Head>
       <Flex height="100%" width="100%" alignItems="center">
         <Flex flexDirection="column" flex="1" pr="md">
           <Text as="h1" fontSize="gigantic" fontWeight="200">
