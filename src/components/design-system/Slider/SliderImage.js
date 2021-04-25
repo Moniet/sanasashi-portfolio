@@ -27,6 +27,7 @@ const Tags = ({ tags = ['No tags :('], hovering = false }) => (
             transitionDelay: `${i * 100}ms`,
             transition: 'transform 0.5s ease, opacity 0.5s ease',
           }}
+          key={i}
         >
           <Text
             key={i}
