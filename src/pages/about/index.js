@@ -1,14 +1,11 @@
-import Link from 'next/link'
 import Footer from '../../components/design-system/Footer'
 import Layout from '../../components/design-system/Layout'
-import Box from '../../components/helpers/Box'
 import Flex from '../../components/helpers/Flex'
-import Spacer from '../../components/helpers/Spacer'
 import Text from '../../components/helpers/Text'
 
 const About = () => (
   <Layout>
-    <Flex width="100%" p="xl" flexDirection="column">
+    <Flex width="100%" height="100%" pt="xl" px="xl" flexDirection="column">
       <Flex>
         <Flex mr="lg" flex="4">
           <Text as="h1" fontSize="gigantic" textAlign="right">
@@ -39,8 +36,8 @@ const About = () => (
           </Text>
         </Flex>
       </Flex>
-      <Footer />
     </Flex>
+    <Footer px="xl" pt="0" />
   </Layout>
 )
 

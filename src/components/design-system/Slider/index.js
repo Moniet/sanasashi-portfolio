@@ -7,6 +7,7 @@ import LeftArrow from './left-arrow.svg'
 import Flex from '../../helpers/Flex'
 import Spacer from '../../helpers/Spacer'
 import Box from '../../helpers/Box'
+import Swipe from '../../helpers/Swipe'
 
 const Container = styled.div`
   position: relative;
@@ -85,29 +86,16 @@ const Slider = () => {
   const container = useRef(null)
   const [mounted, setMounted] = useState(false)
   const [count, setCount] = useState(0)
-  const dragStartPos = useRef(0)
-  const setDragStartPos = (pos) => (dragStartPos.current = pos)
 
   const imageWidth = useMemo(
     () => container.current?.scrollWidth / sliderItems.length,
     [mounted]
   )
 
-  const handleSnap = (e) => {
-    const xPos = Math.floor(dragStartPos.current - e.clientX)
+  const onSwipeLeft = () =>
+    count + 1 < sliderItems.length && setCount(count + 1)
 
-    if (xPos > 0 && count + 1 < sliderItems.length) {
-      console.log('incrementing by ' + (count + 1))
-      setCount(count + 1)
-    }
-
-    if (xPos < 0 && count - 1 >= 0) {
-      console.log('decrementing')
-      setCount(count - 1)
-    }
-
-    setDragStartPos(false)
-  }
+  const onSwipeRight = () => count - 1 >= 0 && setCount(count - 1)
 
   useEffect(() => {
     const left = imageWidth * count
@@ -120,20 +108,13 @@ const Slider = () => {
 
   return (
     <Container>
-      <SliderContainer ref={container}>
-        {sliderItems.map((item, i) => (
-          <SliderImage index={i} count={count} {...item} key={i} />
-        ))}
-      </SliderContainer>
-      <Box
-        onPointerDown={(event) => setDragStartPos(event.clientX)}
-        onPointerUp={(e) => handleSnap(e)}
-        position="absolute"
-        width="100%"
-        height="calc(100% - 40px)"
-        top="0"
-        left="0"
-      />
+      <Swipe onSwipeLeft={onSwipeLeft} onSwipeRight={onSwipeRight}>
+        <SliderContainer ref={container}>
+          {sliderItems.map((item, i) => (
+            <SliderImage index={i} count={count} {...item} key={i} />
+          ))}
+        </SliderContainer>
+      </Swipe>
       <Spacer pt="sm" />
       <Flex
         ml="auto"

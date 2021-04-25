@@ -9,16 +9,10 @@ import Flex from '../../helpers/Flex'
 import Text from '../../helpers/Text'
 
 const Img = styled.img`
-  width: 110%;
-  height: 110%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   z-index: 0;
-  transition: transform 0.2s ease;
-`
-
-const AnimatePadding = styled.div`
-  height: ${(props) => (props.selected ? 0 : `25px`)};
-  transition: height 0.5s ease;
 `
 
 const Tags = ({ tags = ['No tags :('] }) => (
@@ -45,26 +39,33 @@ const SliderImage = ({
   const image = useRef(null)
   const overlay = useRef(null)
 
-  const handleMouseMove = (e) => {}
-
   return (
     <Box
       position="relative"
       css={css`
-        -moz-user-select: -moz-none;
-        -khtml-user-select: none;
-        -webkit-user-select: none;
+        --scale: 0.9;
+        transform: scale(var(--scale));
+        transition: 0.5s ease transform;
       `}
+      style={{ '--scale': count === index ? 1 : 0.9 }}
     >
       <Link href={projectLink} passHref>
         <a>
           <Flex
             position="relative"
-            pr="sm"
             height="100%"
             width={['250px', '250px', '350px', '400px']}
             color="text"
           >
+            <Box
+              position="absolute"
+              top="0"
+              left="0"
+              width="100%"
+              height="100%"
+              zIndex="10"
+              ref={overlay}
+            />
             <Img src={imageLink} ref={image} />
             <Tags tags={tags} />
             <Box
@@ -92,15 +93,6 @@ const SliderImage = ({
           </Flex>
         </a>
       </Link>
-      <Box
-        position="absolute"
-        top="0"
-        left="0"
-        width="100%"
-        height="100%"
-        zIndex="10"
-        ref={overlay}
-      />
     </Box>
   )
 }
