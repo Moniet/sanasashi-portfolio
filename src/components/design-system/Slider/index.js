@@ -1,5 +1,7 @@
 /** @jsxImportSource @emotion/react */
+import { margin } from 'styled-system'
 import styled from '@emotion/styled'
+import { useThrottledFn, useWindowResize } from 'beautiful-react-hooks'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import SliderImage from './SliderImage'
 import RightArrow from './right-arrow.svg'
@@ -8,36 +10,39 @@ import Flex from '../../helpers/Flex'
 import Spacer from '../../helpers/Spacer'
 import Box from '../../helpers/Box'
 import Swipe from '../../helpers/Swipe'
+import Text from '../../helpers/Text'
 
-const Container = styled.div`
+const Container = styled(Flex)`
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
   height: auto;
   margin-right: -80px;
-  flex: 3;
   overflow: hidden;
+  flex: 1;
 `
 
-const SliderContainer = styled.div`
+const SliderContainer = styled(Box)`
   display: flex;
   width: 100%;
   max-width: 100%;
-  height: min(100%, 600px);
   overflow: visible;
   align-items: center;
   transition: transform 0.5s ease;
   position: relative;
   transform: translateX(0px);
+
+  & > * + * {
+    ${margin}
+  }
 `
 
-const scrollbarWidth = 200
+const scrollbarWidth = 180
 
 const ScrollbarContainer = styled.div`
   width: ${scrollbarWidth}px;
-  height: 3px;
-  background: #c4c4c4;
+  height: 2px;
+  background: #333333;
   border-radius: 20px;
   overflow: hidden;
 `
@@ -72,31 +77,59 @@ const Scrollbar = ({
   )
 }
 
-const sliderItems = [
-  {
-    imageLink: '/images/slider/p1.png',
-    title: 'Mirror',
-  },
-  {
-    imageLink: '/images/slider/p2.png',
-  },
-  {
-    imageLink: '/images/slider/p2.png',
-  },
-  {
-    imageLink: '/images/slider/p1.png',
-  },
-]
+export const SliderControls = ({
+  count,
+  setCount,
+  sliderItems = Array(3).fill(''),
+}) => (
+  <Flex alignItems="center" justifyContent="center" pt="xl">
+    <Box pr="md">
+      <Text fontSize="xs" as="span" color="text">
+        {count < 9 ? '0' + (count + 1) : count + 1}
+      </Text>
+    </Box>
+    <Scrollbar noOfItems={sliderItems.length} count={count} />
+    <Flex ml="md" mb="-0.5rem">
+      <Controls>
+        <LeftArrow
+          onClick={() => {
+            count && setCount(count - 1)
+          }}
+        />
+      </Controls>
+      <Spacer ml="sm" />
+      <Controls
+        onClick={() => {
+          if (count === sliderItems.length - 1) setCount(0)
+          else setCount(count + 1)
+        }}
+      >
+        <RightArrow />
+      </Controls>
+    </Flex>
+  </Flex>
+)
 
-const Slider = () => {
+const Slider = ({ count, sliderItems, setCount }) => {
   const container = useRef(null)
   const [mounted, setMounted] = useState(false)
-  const [count, setCount] = useState(0)
+  const [windowSize, setWindowSize] = useState(false)
+  const [scrollWidth, setScrollWidth] = useState(0)
+
+  useWindowResize(
+    useThrottledFn(() => {
+      setWindowSize(setScrollWidth(container.current?.scrollWidth))
+    })
+  )
 
   const imageWidth = useMemo(
-    () => container.current?.scrollWidth / sliderItems.length,
-    [mounted]
+    () => scrollWidth / sliderItems.length,
+    [scrollWidth]
   )
+
+  useEffect(() => {
+    setScrollWidth(container.current?.scrollWidth)
+  }, [mounted])
 
   const onSwipeLeft = () =>
     count + 1 < sliderItems.length && setCount(count + 1)
@@ -105,7 +138,7 @@ const Slider = () => {
 
   useEffect(() => {
     const left = imageWidth * count
-    container.current.style.transform = `translateX(-${left}px)`
+    container.current.style.transform = `translateX(-${left + 40}px)`
   }, [count])
 
   useEffect(() => {
@@ -115,47 +148,12 @@ const Slider = () => {
   return (
     <Container>
       <Swipe onSwipeLeft={onSwipeLeft} onSwipeRight={onSwipeRight}>
-        <SliderContainer ref={container}>
+        <SliderContainer ref={container} ml={[0, '3rem', '5rem', 'xl']}>
           {sliderItems.map((item, i) => (
             <SliderImage index={i} count={count} {...item} key={i} />
           ))}
         </SliderContainer>
       </Swipe>
-      <Spacer pt="sm" />
-      <Flex
-        ml="auto"
-        alignItems="center"
-        justifyContent="flex-end"
-        pr="80px"
-        pt="40px"
-      >
-        <Box pr="md" color="text">
-          {count < 9 ? '0' + (count + 1) : count + 1}
-        </Box>
-        <Scrollbar
-          container={container}
-          noOfItems={sliderItems.length}
-          count={count}
-        />
-        <Flex ml="md" mb="-0.5rem">
-          <Controls>
-            <LeftArrow
-              onClick={() => {
-                count && setCount(count - 1)
-              }}
-            />
-          </Controls>
-          <Spacer ml="sm" />
-          <Controls
-            onClick={() => {
-              if (count === sliderItems.length - 1) setCount(0)
-              else setCount(count + 1)
-            }}
-          >
-            <RightArrow />
-          </Controls>
-        </Flex>
-      </Flex>
     </Container>
   )
 }

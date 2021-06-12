@@ -1,15 +1,15 @@
 const theme = {
   colors: {
     text: '#EAEAEA',
-    bg: '#1A1A1A',
+    bg: '#030303',
   },
   fonts: {
     header: "'Editorial New', 'Times New Roman', serif",
     body: "'Inter', 'Helvetica', sans-serif",
   },
   fontSizes: {
-    xxs: '0.833rem',
-    xs: '1rem',
+    xxs: '0.7rem',
+    xs: '0.833rem',
     sm: '1.2rem',
     md: '1.44rem',
     lg: '1.728rem',
@@ -26,6 +26,9 @@ const theme = {
     lg: '4rem',
     xl: '8rem',
     xxl: '16rem',
+  },
+  zIndices: {
+    nav: '10000',
   },
 }
 

@@ -34,9 +34,14 @@ const Nav = () => {
       justifyContent="space-between"
       as="nav"
       ariaLabel="Main Navigation"
+      position="absolute"
+      top="0"
+      left="0"
+      p="65px"
+      zIndex="nav"
     >
       <Logo fill="#eaeaea" />
-      <MarginProvider ml="lg">
+      <MarginProvider ml="md">
         <Link href="/" passHref>
           <NavLink active={isHomePage}>Work</NavLink>
         </Link>
