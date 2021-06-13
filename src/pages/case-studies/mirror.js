@@ -136,10 +136,10 @@ const Mirror = () => (
     <img src="https://s3-alpha-sig.figma.com/img/7410/2070/1a86118dd90ffc1cc122e1c70b69400a?Expires=1624233600&Signature=KMXp1EHQyN4gzs9-4AvgWRTa2bnowagPUF96HXnlbhQdBos179DpNNS5VFTpUfVRq5-r8YceYbsaklLFrykQ9WVgt~0L1hrPiJ9rkoqCPTMb8gEnt5IsAj88qZ18A06DTZSMysR6QbV1pPfEK-48K3PO8Issi5JkkTj-ISSnC0m2qJyX5~E9q3CXtMLUsqy4remJOvbNdFYX~q6INYbZz4kudNvd46udobEA9P2r8Y0nwa6MYqocK0yXg7~hGkm3DFQw2Itqy~4hGDOa8aLCL0o8jOGIy17UjXO6jCVTJ4L1DyUvatz32XlKmNF5qVQaw6MpWEEXJQagi1VKxWCK5w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
 
     <ParaCenter>
-      A minimal layout with a combination of a serif font for headings and sans
-      serif for body text convey a modern and luxurious look-and-feel. The use
-      of minimal colors and large images also play a key role in achieving an
-      overall clean, minimalist layout.
+      In order for all the colors to harmonise with one another and ensure a
+      pleasing, non -cluttered layout, the images used have been carefully
+      selected. Large, clear images convey professionalism and ensures
+      trustworthiness in the brand.
     </ParaCenter>
 
     <FullWidthImg src="/images/case-study/mirror-mockup.png" />
