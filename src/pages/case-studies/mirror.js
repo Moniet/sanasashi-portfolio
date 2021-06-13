@@ -23,6 +23,11 @@ const Mirror = () => (
       'UI Design',
       'Usability Testing',
     ]}
+    nextCaseStudy={{
+      href: '/case-studies/phoenix',
+      header: 'Phoenix',
+      categories: ['interaction design ', ' ui design'],
+    }}
   >
     <ParaWithHeaderLeft header="Research">
       <Para>

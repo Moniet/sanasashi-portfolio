@@ -13,122 +13,113 @@ const Phoenix = () => (
   <CaseStudy
     header="Phoenix Medical Systems"
     description="Responsive Website re-design"
-    projectBrief="Design a responsive e-commerce website that is easy to use and allows customers to browse through all products and filter by size, color, style, etc.
-    "
-    whatIDid="Given the project brief I worked on developing a modern website concept for a seamless shopping experience that would cater to all users and therefore drive sales."
-    introduction="Mirror is a successful clothing store with the goal of making any type of clothing affordable and accessible to everyone. Mirror started back in 1994 as a clothing store targeting a budget-minded audience who looked for high quality yet affordable clothing for any occasion. "
+    projectBrief="Design a fully responsive website for Phoenix, making it easy and intuitive to use while ensuring it looks professional and modern."
+    whatIDid="Given the project brief I worked on developing a seamless user experience that is intuitive with a clutter free layout while employing modern, relevant UX methods."
+    introduction="Phoenix is an established successful company manufacuring Maternal and Neonatal equipment. Phoenix was founded in 1989 with the aim for providing innovative and low-cost solutions for infant and maternal care."
     tags={[
       'UX Research ',
       'Strategy and Design',
-      'Branding',
       'UI Design',
       'Usability Testing',
     ]}
+    nextCaseStudy={{
+      href: '/case-studies/stream-net',
+      header: 'Stream Net',
+      categories: ['interaction design ', ' ui design'],
+    }}
   >
     <ParaWithHeaderLeft header="Research">
       <Para>
         Goal: <br />
-        Learn what existing customers value about shopping online and identify
-        possible pain points so that we can create a seamless shopping
-        experience that would drive sales.
+        Phoenix an established manufacturer for Maternal and Neonatal equipment
+        wishes to redesign their existing purely informational website that
+        could develop a better user experience and help attract a larger
+        customer base.
       </Para>
       <Para mb={0}>
         Objectives: <br />
       </Para>
       <Ul
         list={[
-          'Determine the expectations users have when shopping and how shopping online accomplishes this.',
+          'Determine the expectations users have when searching for maternal and neonatal care and how an online website helps accomplish this.',
           'Determine the factors that go into purchasing a product.',
-          'Determine when and how often people shop online and why they prefer this over visiting a store.',
-          'Understand existing problems people face when shopping online.',
+          'Identify target customers and determine expectations and existing pain points.',
+          'Identify specific key words used when looking for neonatal and maternal products. ',
         ]}
       />
       <Para>
-        Methods: <br />
-        • Comparative and competitive research: I identified strengths and
-        weaknesses of 4 popular shopping websites. This was done to see what our
-        competitors offer and at what price points. Since the customer base
-        varies by location, it was necessary to conduct market research to
-        identify existing competitors and analyse their approach to an effective
-        business model - (SWOT). This gave an idea of what the brand could do
-        differently. Customer reviews also helped in identifying common
-        unaddressed issues.
+        Methods: <br />I carried out secondary research (competitor analysis) by
+        comparing features and designs of other Maternal and Neonatal companies
+        to better understand what features Phoenix’s website must have, what
+        would be nice to have, and what could set them apart from their
+        competitors. Conducting user interviews and creating personas helped in
+        identifying user frustrations. This aided in the development of a
+        website that would address common painpoints and in turn have a better
+        user experience.
       </Para>
       <Para>
-        User interviews: <br />I interviewed 4 participants to hear first hand
-        their stories of how they use the service and what role it plays in
-        their lives. Conducting 1:1 interviews with the user gives an
-        understanding of how a user thinks. With the help of a focus group,
-        users were asked about their experience with online shopping. This
-        helped in identifying attitudes, expectations and needs of the user
-        (empathy map). Analytics data to see where site visitors and site
-        subscribers spend most of their time.
+        User: <br />
+        We assume users belonging to the following categories in our target
+        industry. • Hospitals (administration staff - both government and
+        private) looking to purchase the product(s) in bulk. • Doctors that
+        would like to enquire about the products and make a purchase. • Users
+        looking to buy assistive devices.
       </Para>
       <Para>
-        Participants: <br />
+        Brand Message: <br />
         People in the age group between 18-34 (demographic that shop online:
         statista.com) belonging to different backgrounds and with varied income.
       </Para>
+      <Ul list={['Inviting', 'Trustworthy', 'Premium quality']} />
     </ParaWithHeaderLeft>
     <ParaWithHeaderLeft header="Ideation">
       <Para>
-        Wireframes of the layout of the website after developing sitemaps and
-        user flows. My ideas were solidified through user research and it
-        allowed me to design a layout that would meet user expecttions and
-        therefore alcasslow for a more positive shopping experience overall.
+        The goal is to redesign the website to ensure it is relevant and
+        accessible with an emphasis on responsive web design, customer journey
+        mapping and strategic thinking
       </Para>
+      <Ul
+        list={[
+          'Redesign for better user experience, keeping in mind the role the website plays in the purchase process. ',
+          'Create a fully responsive website design.',
+          'Develop or extend coherent branding that aligns with the company’s current and/or desired clientele and customer experience. ',
+          'Add more unique or advanced features that would compel the customer to contact the company or make an order.',
+        ]}
+      />
     </ParaWithHeaderLeft>
-    <ParaWithHeaderLeft>
-      <ResponsiveGrid columns={3} gridGap={['auto', 'auto', '2rem']}>
-        <Para>Must Haves:</Para>
-        <Ul
-          li={{ pb: 'sm' }}
-          list={[
-            'Clear product images and descriptions',
-            'Intuitive layout and familiar icons',
-          ]}
-        />
-        <Ul
-          li={{ pb: 'sm' }}
-          list={[
-            'Clear product images and descriptions',
-            'Easy and secure checkout',
-          ]}
-        />
-      </ResponsiveGrid>
-    </ParaWithHeaderLeft>
-    <img src="/images/case-study/mirror-wireframe.png" />
+
+    <img src="https://s3-alpha-sig.figma.com/img/6e46/097c/d6adfc96e85e82526f05f780b5c1ef5c?Expires=1624233600&Signature=MEkAeQdCIR2mWrpIfIz2Hk9fBnwiNTMFdEL2rQeO3jToOtK4oWfO5Y5M4WTOKdon8nI-wLJnwbuHoI6TUvdEpSVRBvPun757R8cAukBCZAFWodVdtxwOPNLtJZMIfjNCbfcWjrqAgLQTOsUCpa2Rkvk7t6lQRNr~226eWWguSYBQLyHAqgn28c0KiBdYv7UFfDn~lAkYVGu5g01IotB1vwPN5iDfwo-lUbx2k6ReV7UwNKY6tlkJCb7t5pWYpKubxO-ondQpyT7LF5Ehqfb9Y8yTZA56Cym7EsdBareVqs0QTVmbUHD~hengnja59QebYranah8DPvLcuBrF7asprA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
     <ResponsiveGrid columns={2}>
       <ParaWithHeader header="The Objective">
         <Para>
-          Understand and learn what existing customers value about shopping
-          online and identify possible pain points to create a positive shopping
-          experience that would drive sales.
+          Re-design Phoenix’s exsisting webaite to ensure the website is modern
+          and professional looking. The design must be intuitive and fully
+          responsive.
         </Para>
       </ParaWithHeader>
       <ParaWithHeader header="The Solution">
         <Para>
-          From understanding user expectations through user interviews and
-          usability testing, I developed a modern, clean and intuitive website
-          for Mirror.
+          Employ better UX practices that would ensure that the layout of the
+          website is clean and only necessary informatoin is presented. More
+          emphasis on showcasing the brand’s products.
         </Para>
       </ParaWithHeader>
     </ResponsiveGrid>
     <ResponsiveGrid column={1} gridGap="md">
-      <img src="https://s3-alpha-sig.figma.com/img/985c/8620/b4c165ee627ea31b7315242bcfd53b25?Expires=1624233600&Signature=hAtpQQ1pZSIchuHhS6NSW~w-RnvuqOpfxwxs1g8wE1c8vk-gsPHMUvj-bs-~qlrxTH3ZyEgYJubW-KLE0SBN4HlbJVmLgICmrON5PZtdGcM9tv2IPk5zxQQ4dvBfDhRQzNH-seqlmL01miWTtrwXhoOj9D4zpiBt8t65jQ4TK9Fn-EJZ3Vz4A4odXhFIwWlhyelF20BftZIgOE6EYxEL3JLrGH-HT~FnWcDkmNu4hzUEros4LJ4IiRR610w4SHpRi9CMDNFdJhzH0C4oQn0QOlVTbIXJ4H4M3rZJm6ePNHV5jlba1O2ZNMP2hhyKHRuebSWh9pHACFzghENi441LcQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
-      <img src="https://s3-alpha-sig.figma.com/img/165d/4158/ed5c6f1c7aa3de4ac87d31d2f3cfc075?Expires=1624233600&Signature=ffAiIfgk-QvbID14MvfFjHslsq-fkMw9hHrgJJNDO7spqNjT9WTY0ttNJnxg~0zjnb9sG~8kNM53E-jzmhOjwDFLzqtGx3b54xBniREn6XAOVJRxXtCPhWv-ri5Rd2ljIrNqJ6FVGw8CYOvFjlNzdic3xPXeBVRxQ1WzkFMorl6Pg39LE0DX~DAvPbx4Jml2IslnfNke85Rn40PyCrj8a43J-iNCkEdEegHEm39-oe-mhkE-HjLHqMCZRWLYyFUOFhVNs8kJfW-mXTmw3OPNwWJkyaFSZs8PcACy41Q4TmajzLdjDdSlqZaHgNZkTnSlAzPdlEDuYpvwc1KpPfcZKg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
-      <img src="https://s3-alpha-sig.figma.com/img/32ea/bdfc/b4f767459c25d106087a013eed1d07b5?Expires=1624233600&Signature=TS0CWDuYvvNPxIESDdHsAs0wKuQgoD76uaZddPa0V9v1Sah3nBCcjlJI7naoSG655yZou1Ei62bN1IyLRYR6tnuk6dZbgAHCgsc2Qvqn9eBanBKAmA7h2pUCIhWFr-vem9UoyRbNWae~A9dI2gqusTe9n2xP~TO3bBdgev56qNuC22qZU6w~drpTyZwA9Oy2xVpzoeGecGK2gepSCpuNUkC4kNkILUIr1YyQCny0OxgLbkKFZkl7hdM9hnsEyjHrrpsDB2~jvtd3KtCcvb29kgeu93c-rIoaDCscYy0aQyBWFGv-IiTUSaTtBtR0-wOeYeaG0OVavMZrskBHhYYc6Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
-      <img src="https://s3-alpha-sig.figma.com/img/6bfd/8d79/2462df3df20a1b5575292b040f554385?Expires=1624233600&Signature=XLABRzLj50j7Dg4JCRge3wBO1k8e1UNCiX2raUXRw0cTvK3PDTRnyx5QTFZMrXvorG0BitOCjgMUZwM6kGv5B4-rMHw-kSxwjljCokRfmH3LXt~6itdYTSnelCL1aUoQen3bCum5j3vEVn6LqI4AuBRKdNQUlkyNhJmU1LZDby-ICA2tY9YiqUAiCk1-T9tVEIxlaIIAD~SDVUHperJj3oc6YdPEcK33QIkzI6zb~npZs3-h1t2CwHNSySdrpAzgQXxBpVgyvvyWx~WvideAoMZNx8dJw6oCX~uH0gLy9tjgxGRU9aU1TaThEmiTJa22zOWsGL7ffqtzExsSIlMdcA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
-      <img src="https://s3-alpha-sig.figma.com/img/c215/96cd/ea0f4d8be0bf974111935a2f60450fe2?Expires=1624233600&Signature=de37QPe5R7PXBNxcES4Q1zF8Z5G1bWasaoKtJncZX~qt732J0ywWyx1VzEXFzbkMBihj7QF09o3XRRLAVxXaaJvNvkJCuCAVWYe8R90ltbU~LEMZBD4FH2Cz-1Gkrn9Jd01f65olnrKsdwzI3F2Efy7bUJvd5RBAO3400yKiyZvluAEN9hLiojHngQ5m7ExfqemQJTIQx99rESoCB2S3c8ynMoD1aSFyd2rQ1Sx4nbnKEZlOWsley4swZikzkjWpTOIofxmleJ0YZIYDFvDXZRkPeMwMwPf~qwzVSD~kIZIT88JdQvcf2dnW-hvpZwJP4gQNXue3BEiP29q5OCni5Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
+      <img src="https://s3-alpha-sig.figma.com/img/c161/9f2d/556be6783052200f1ba3d3fa0b77730a?Expires=1624233600&Signature=UcUzW-MKlDscVIyP14k~AUyCzdmgJj79-GTY11OsANRn6DKPqIZikQ2KBVq~00xo86~gXAX-gcgExFi7j2Nh8DhoYgbD97Im~7heOX~qc4215WUCViycrSvsPP5OLT9gpDIibXcesOVtUIIw3QMMCcRjQNgvBCDjb0e4ylLXjESmDNMA7sC--jUBUMSLNncsm2KqeWj1M9RBj4fxd~UrC9KsKXom8tc6f7OuMTUOSVyKn6Oh7-sX8mmXj~jPqgjHAHAaTcwT4MbcvVpZEEnmKOOihHUaoyJ6cBErngmEyLRQNB21luumxedHyGrj~DUoUlEjLL4IQRezem8kb9eWTQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
+      <img src="https://s3-alpha-sig.figma.com/img/e693/32b4/d96639d040ea3ac706f5caa824875aa2?Expires=1624233600&Signature=OQUYicOE-rsMvEVyN66X0JKR1J0x0n-q-kMzZ4C4O~fqWRjr2VuDF7OfOik5VXD9gthakcc~R5Ut6K76OFP4BW9apYNrfcOZ71B4TTiIVDPCOrdKAbCUfDmhvjnCC4t3hwpFhAwA5krrBQSsQdyu7DrPrmlDs21t15lxlG5Zv7qqKTkqM8uOysUrORm5KGEw4buSKsFGK56bw2Iz7YcSQaabycTEcJvEM7sCaiBCDM5ZBYalRl8LeVr6azzj92B4emZ-A~sJiQS-hGCaElQIcauN90vyRU2uXOAGZhx87Zzh~6i8zMPS-N6D6U2sZLIuRwqk~nhBKuGJlVGEXV4ffw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
+      <img src="https://s3-alpha-sig.figma.com/img/f2a8/7c5c/77b495bdffa2c47557e4ab3d12257569?Expires=1624233600&Signature=bWUaiOeiWZJsLY0JBxpgbJOyJIy5FiPGkGn9r9~T8BAyC8lPorHnAdx5UWs2Zbo~EMa~QMXf4uYpa9YqSMtMP8AhpAUNl2l8rjiXuay6FF6-oVryIVJyKdjb1axClMcdCTHtsbGIa2rwBl3B4qOZ6N8-Y5MLK7Vo8FFSod4UiZ8Mg4z4KClpiBkP7B7Mh3V4NYXlyN56ZifTbP4qTeDaH89-RnEOaVq5D64ayo~xackV2sNT714Dq18CPOzSXlj-KaJ7ujMkDDYSZoxSHIGR7uzBKB6ledqvOv4LigM2UQt5XjTdahX4xeulpfUsU8C61-w2CQEAbuRelRzVcmytaw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
+      <img src="https://s3-alpha-sig.figma.com/img/b44d/94f1/204ec964cc05d7e172d32f22a5ef8edf?Expires=1624233600&Signature=JduuXkQgQ7h3iAk2oS~iTuLz6z9kAiUAjd95v1iAzEp4gBZYI0lXkrejTF8NexvKdwKofsfWg7pMmlSGaQTtkjTyl~xkA3M~mtKnSFOXz26yAmFpI6rW8GzIzjZfZ0Vk0MW6pgvmBdMv208brSR432KgKRv8uu5ZQW5Qnci33kQ9xAUdll48yoG5MYoqT~Pm3NoSw3yUuSo7j41LvwJUFeSC9UsasZIbXYpYWU2UnsA1sREaA2nUqyciImJjFI0qdDl68VK8RHal2FQAb1rU52UOfMkCVBoND0RRQamAqo86eAIiYq9vVrpe~eQWHNs5Ej6Aaxdj7bYoG-2SqQ4Mrg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
+      <img src="https://s3-alpha-sig.figma.com/img/8291/7432/a4b9bcc97caf06d0740169a0f613384a?Expires=1624233600&Signature=FxLib8kFewOz9MFDhtiwnAWWoFPsnIiCBjGItxQ1LnN8scpiqp87-Em~VEbAeyXKJn6Hsrp0p3~ht8D7SzlntGpj0V~Sel0AjzBxSOYahqMZVqzlOuNRzaWUXfemiEw813suIS9542PcwA31oKnNnS-Zf5Iy9v8Okkb3KHIlQoHkmxSSQdZnsnVq9hqq-CCrLt8Fsq7U5GxDKtu63ZGrKrHcVN~GLqtH4eYBGfq2FCE6BvmghnG8a757uWWQQCd-mKiEc6O98IWGKG5m741ZY33v5gveYhzLIO6bw0epZkXKwgLQmkYqQR9nUwioTXLVdBxeizNw5L53lrbyl6xVDg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
     </ResponsiveGrid>
     <ParaCenter>
-      A minimal layout with a combination of a serif font for headings and sans
-      serif for body text convey a modern and luxurious look-and-feel. The use
-      of minimal colors and large images also play a key role in achieving an
-      overall clean, minimalist layout.
+      As this is a redesign, I wanted to ensure that the layout is designed to
+      tell the brand’s story efectively while incorporating some of the latest
+      design techniques: making the overall website feel modern, high-tech and
+      professional.
     </ParaCenter>
 
-    <img src="https://s3-alpha-sig.figma.com/img/a4e5/8c76/4a2bc29ccff53ac16e7d64aee2028588?Expires=1624233600&Signature=RvyYoP90swWbimHiSyTs5glpmBWZdOy88QyGEQCdFArhhT6~dFbxbDxidiV1Wli-jFBOOWkgosnpl84yITZdu-uBsjRa~SII99r5GFse1OFMp97CTAds5EO1i8fGh5Raucaa9YK1CGjWI3Uts9JnLm58t9u2R~rpj5dRSnU~NTY6nnDpf6SyfPbNbAQl9Gvq1sr0PELBAb1oSno7QKLl7osUwX0zrqCf44KhU6GWSzRBcvuSz0sCJhqNQYYWE8SGU5G2QGLdk0iuGumj4xafvtFzUbNvptr3-3Ww7XRnuidhFJ6EqSNFNOfSFkt5LAhh7OgW4rUfIGW9sL59ONvUgg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
+    <img src="https://s3-alpha-sig.figma.com/img/1bda/736e/da1529a3ead649147dd1a83cac17d634?Expires=1624233600&Signature=H~xPsJ~qCZqba2DUNbVPxYfWvfGdTjYXAKjyIOdVQvd3F4xfdd-z8CNOaS8uBq~COePHalu9xaRT~MafYBxiLC~C4FKUuNQmO~5g-P0xKWkdp-yK79ZP5N~G0LcRyE6ea1TsRzgs5cGBxNjB8~ALhmFHrWVqckVLjWAR~B8tPvLZuZrF4gQFHqN5l9J1txFEzdyWGg7zTsvNtDvsS1zyM4276rnXBdGvUVX6Oltsf2lPxGje0cNcbOART6S17Df-eAXK~QVWVn3VnZLLgCqBCfh3v0ZouoLgASyp70y9HSd-ccYdku3DujlRa~BtL8KUELn1jiIkeWikd1evTGUltA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
     <img src="https://s3-alpha-sig.figma.com/img/7410/2070/1a86118dd90ffc1cc122e1c70b69400a?Expires=1624233600&Signature=KMXp1EHQyN4gzs9-4AvgWRTa2bnowagPUF96HXnlbhQdBos179DpNNS5VFTpUfVRq5-r8YceYbsaklLFrykQ9WVgt~0L1hrPiJ9rkoqCPTMb8gEnt5IsAj88qZ18A06DTZSMysR6QbV1pPfEK-48K3PO8Issi5JkkTj-ISSnC0m2qJyX5~E9q3CXtMLUsqy4remJOvbNdFYX~q6INYbZz4kudNvd46udobEA9P2r8Y0nwa6MYqocK0yXg7~hGkm3DFQw2Itqy~4hGDOa8aLCL0o8jOGIy17UjXO6jCVTJ4L1DyUvatz32XlKmNF5qVQaw6MpWEEXJQagi1VKxWCK5w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
 
     <ParaCenter>
@@ -138,22 +129,23 @@ const Phoenix = () => (
       overall clean, minimalist layout.
     </ParaCenter>
 
-    <FullWidthImg src="/images/case-study/mirror-mockup.png" />
+    <FullWidthImg src="/images/case-study/phoenix-mockup.png" />
     <ParaCenter>
-      The website is designed to be responsive - ensuring the page is available
-      and renders well on all devices. This ensures the brand can tap into the
-      online e-ommerce market effectively.
+      I had to ensure that the look and feel of the website aligned with the
+      brand’s identity and showcased their products effectively. I have designed
+      the website with minimal text and elements that are spaced out well for a
+      better organised layout.
     </ParaCenter>
-    <img src="/images/case-study/mirror-responsive.png" />
-    <ParaWithHeaderLeft header="Usability">
-      The website is designed to be responsive - ensuring the page is available
-      and renders well on all devices. This ensures the brand can tap into the
-      online e-ommerce market effectively.
-    </ParaWithHeaderLeft>
+    <img src="/images/case-study/phoenix-responsive.png" />
     <ParaWithHeaderLeft header="Conclusion">
-      The website is designed to be responsive - ensuring the page is available
-      and renders well on all devices. This ensures the brand can tap into the
-      online e-ommerce market effectively.
+      Although I was unable to conduct usability tests due to the time
+      constraint, I recieved constructive feedback from my client and made
+      iterations to my design. Overall, I was able to design a minimal and
+      professional looking website for the company and meet the expectations of
+      the client. This design has only necessary text and showcases the
+      company’s products in a better manner. The client found the flow of the
+      website intuitive and believes the aligns with both the user goals and
+      business goals.
     </ParaWithHeaderLeft>
   </CaseStudy>
 )
