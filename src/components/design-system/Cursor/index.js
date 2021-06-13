@@ -35,7 +35,7 @@ const Cursor = () => {
   return (
     <Circle
       css={css`
-        @media (max-width: 992px) {
+        @media (max-width: 500px) {
           display: none;
         }
       `}

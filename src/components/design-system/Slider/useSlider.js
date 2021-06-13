@@ -13,6 +13,8 @@ const sliderItems = [
     year: '2021',
     category: 'Website Re-design',
     imageLink: '/images/slider/p2.png',
+    mobileImageLink: '/images/slider/p2-mobile.png',
+    projectLink: '/case-studies/phoenix',
   },
   {
     imageLink: '/images/slider/p2.png',

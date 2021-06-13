@@ -16,28 +16,10 @@ const dummmyTextLg =
 
 const MainHeader = ({ children }) => (
   <Box width={['100%', '100%', '300px']} mx="auto">
-    <Text fontSize="xl" mb={0} lineHeight="0.5" textAlign="center">
+    <Text fontSize="xl" mb={0} lineHeight={1} textAlign="center">
       {children}
     </Text>
   </Box>
-)
-
-export const Ul = (props) => (
-  <Flex as="ul" flexDirection="column" {...props} pl="sm" mt={0}>
-    {props.list.map((listItem, i) => (
-      <Text
-        as="li"
-        key={i}
-        fontSize="xs"
-        color="text"
-        {...(props.li || {})}
-        mb={0}
-        css={{ flex: 1 }}
-      >
-        {listItem}
-      </Text>
-    ))}
-  </Flex>
 )
 
 export const ResponsiveGrid = ({ children, columns, gridGap }) => (
@@ -50,13 +32,30 @@ export const ResponsiveGrid = ({ children, columns, gridGap }) => (
 )
 
 export const Para = (props) => (
-  <Text fontSize="xs" color="text" {...props}>
+  <Text fontSize={['xs', 'xs', 'sm']} color="text" {...props}>
     {props.children}
   </Text>
 )
 
+export const Ul = (props) => (
+  <Flex as="ul" flexDirection="column" {...props} pl="sm" mt={0}>
+    {props.list.map((listItem, i) => (
+      <Para
+        as="li"
+        key={i}
+        color="text"
+        {...(props.li || {})}
+        mb={0}
+        css={{ flex: 1 }}
+      >
+        {listItem}
+      </Para>
+    ))}
+  </Flex>
+)
+
 const Header = ({ children }) => (
-  <Text fontWeight="500" color="text">
+  <Text fontWeight="500" fontSize="20px" color="text">
     {children}
   </Text>
 )
@@ -75,7 +74,7 @@ export const ParaWithHeader = (props) => (
 
 export const ParaWithHeaderLeft = ({ children, header }) => (
   <ResponsiveGrid columns="5" gridGap={[0, , 'xl']}>
-    <Grid gridColumn="span 1">
+    <Grid gridColumn="span 1" width="100px">
       <Header>{header}</Header>
     </Grid>
     <Grid gridColumn="span 4">{children}</Grid>
@@ -85,6 +84,14 @@ export const ParaWithHeaderLeft = ({ children, header }) => (
 export const FullWidthImg = ({ src }) => (
   <Box mx={['-2rem', '-2rem', '-4rem', '-8rem']}>
     <Box as={'img'} src={src} />
+  </Box>
+)
+
+export const ParaCenter = (props) => (
+  <Box width={[1, 1, 1 / 2]} mx="auto">
+    <Para textAlign="center" {...props}>
+      {props.children}
+    </Para>
   </Box>
 )
 
@@ -142,9 +149,9 @@ const CaseStudy = ({
           >
             INTRODUCTION
           </Text>
-          <Text fontSize="xs" textAlign="center">
+          <Para textAlign="center" fontSize={['sm', 'sm', '20px']}>
             {introduction}
-          </Text>
+          </Para>
         </Box>
       </Flex>
       <Box position="relative" p={['md', 'md', 'lg', 'xl']}>
@@ -159,7 +166,7 @@ const CaseStudy = ({
             <Flex flexDirection="column" width="100%" alignItems="flex-start">
               <div>
                 {tags.map((tag, i) => (
-                  <Para key={i} lineHeight={1}>
+                  <Para key={i} lineHeight={0.75}>
                     {tag}
                   </Para>
                 ))}

@@ -9,9 +9,10 @@ import CaseStudy, {
 } from '../../components/design-system/CaseStudy'
 import Grid from '../../components/helpers/Grid'
 
-const Mirror = () => (
+const Phoenix = () => (
   <CaseStudy
-    title="Mirror"
+    header="Phoenix Medical Systems"
+    description="Responsive Website re-design"
     projectBrief="Design a responsive e-commerce website that is easy to use and allows customers to browse through all products and filter by size, color, style, etc.
     "
     whatIDid="Given the project brief I worked on developing a modern website concept for a seamless shopping experience that would cater to all users and therefore drive sales."
@@ -96,7 +97,7 @@ const Mirror = () => (
         />
       </ResponsiveGrid>
     </ParaWithHeaderLeft>
-    <img src="/images/case-study/mirror-wireframe.svg" />
+    <img src="/images/case-study/mirror-wireframe.png" />
     <ResponsiveGrid columns={2}>
       <ParaWithHeader header="The Objective">
         <Para>
@@ -157,4 +158,4 @@ const Mirror = () => (
   </CaseStudy>
 )
 
-export default Mirror
+export default Phoenix
