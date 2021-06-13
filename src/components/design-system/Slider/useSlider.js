@@ -31,7 +31,7 @@ const sliderItems = [
     category: 'Website Re-design',
     imageLink: '/images/case-study/zoom-2.png',
     mobileImageLink: '/images/slider/p4-mobile.png',
-    projectLink: '/case-studies/phoenix',
+    projectLink: '/case-studies/zoom',
   },
 ]
 export const useSlider = () => {
