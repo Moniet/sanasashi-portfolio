@@ -174,7 +174,9 @@ const Slider = ({ count, sliderItems, setCount }) => {
       onSwipeLeft={onSwipeLeft}
       onSwipeRight={onSwipeRight}
       onClick={() =>
-        router.push(sliderItems[mouseOverProjectIndex].projectLink)
+        router.push(
+          sliderItems[isMobile ? count : mouseOverProjectIndex].projectLink
+        )
       }
     >
       <Container>
