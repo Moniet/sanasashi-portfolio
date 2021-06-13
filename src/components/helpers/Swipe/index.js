@@ -1,6 +1,13 @@
 import { useRef } from 'react'
 
-const Swipe = ({ onSwipeRight, onSwipeLeft, children }) => {
+const Swipe = ({
+  onSwipeRight,
+  onSwipeLeft,
+  children,
+  onClick = () => {
+    console.log('handle click')
+  },
+}) => {
   const dragStartPos = useRef(0)
   const setDragStartPos = (pos) => (dragStartPos.current = pos)
 
@@ -9,10 +16,10 @@ const Swipe = ({ onSwipeRight, onSwipeLeft, children }) => {
   const handlePointerUp = (e) => {
     const xPos = Math.floor(dragStartPos.current - e.clientX)
 
-    if (xPos > 0) onSwipeLeft(e)
-    if (xPos < 0) onSwipeRight(e)
+    if (xPos > 40) return onSwipeLeft(e)
+    if (xPos < -1 * 40) return onSwipeRight(e)
 
-    setDragStartPos(false)
+    onClick()
   }
 
   return (

@@ -15,6 +15,7 @@ import Spacer from '../../helpers/Spacer'
 import Box from '../../helpers/Box'
 import Swipe from '../../helpers/Swipe'
 import Text from '../../helpers/Text'
+import { useRouter } from 'next/router'
 
 const Container = styled(Flex)`
   position: relative;
@@ -130,9 +131,10 @@ export const SliderControls = ({
 const Slider = ({ count, sliderItems, setCount }) => {
   const container = useRef(null)
   const [mounted, setMounted] = useState(false)
-  const [windowSize, setWindowSize] = useState(false)
   const [scrollWidth, setScrollWidth] = useState(0)
   const isMobile = useMediaQuery('(max-width: 500px)')
+  const router = useRouter()
+  const [mouseOverProjectIndex, setMouseOverProjectIndex] = useState(0)
 
   useWindowResize(
     useThrottledFn(() => {
@@ -150,10 +152,17 @@ const Slider = ({ count, sliderItems, setCount }) => {
     setScrollWidth(container.current?.scrollWidth)
   }, [mounted])
 
-  const onSwipeLeft = () =>
+  const onSwipeLeft = () => {
+    prevCount.current = count
     count + 1 < sliderItems.length && setCount(count + 1)
+  }
 
-  const onSwipeRight = () => count - 1 >= 0 && setCount(count - 1)
+  const onSwipeRight = () => {
+    prevCount.current = count
+    count - 1 >= 0 && setCount(count - 1)
+  }
+
+  const prevCount = useRef(0)
 
   useEffect(() => {
     const left = imageWidth * count
@@ -167,11 +176,24 @@ const Slider = ({ count, sliderItems, setCount }) => {
   }, [])
 
   return (
-    <Swipe onSwipeLeft={onSwipeLeft} onSwipeRight={onSwipeRight}>
+    <Swipe
+      onSwipeLeft={onSwipeLeft}
+      onSwipeRight={onSwipeRight}
+      onClick={() =>
+        router.push(sliderItems[mouseOverProjectIndex].projectLink)
+      }
+    >
       <Container>
         <SliderContainer ref={container} ml={[0, 0, '3rem', 'xl']}>
           {sliderItems.map((item, i) => (
-            <SliderImage index={i} count={count} {...item} key={i} />
+            <SliderImage
+              index={i}
+              count={count}
+              {...item}
+              prevCount={prevCount.current}
+              mouseOverProjectIndex={setMouseOverProjectIndex}
+              key={i}
+            />
           ))}
         </SliderContainer>
       </Container>

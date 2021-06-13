@@ -3,6 +3,7 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { themeGet } from '@styled-system/theme-get'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { useEffect, useRef, useState } from 'react'
 import Box from '../../helpers/Box'
 import Flex from '../../helpers/Flex'
@@ -67,47 +68,52 @@ const SliderImage = ({
   tags = ['UX Research', 'Wireframing', 'UI Design'],
   index,
   count,
+  prevCount,
+  mouseOverProjectIndex = () => {},
 }) => {
   const image = useRef(null)
   const overlay = useRef(null)
   const [hovering, setHovering] = useState(false)
+  const shouldHandleClick = count === prevCount
+  const router = useRouter()
+
+  const handleMouseOver = () => {
+    setHovering(true)
+    mouseOverProjectIndex(index)
+  }
 
   return (
     <Box
       position="relative"
-      onMouseOver={() => setHovering(true)}
+      onMouseOver={() => handleMouseOver()}
       onMouseLeave={() => setHovering(false)}
     >
-      <Link href={projectLink} passHref>
-        <a>
-          <Flex
-            position="relative"
-            width={['100vw', '100vw', '400px', '500px']}
-            color="text"
-            justifyContent="center"
-          >
-            <Box
-              position="absolute"
-              top="0"
-              left="0"
-              width="100%"
-              height="100%"
-              zIndex="10"
-              ref={overlay}
-            />
-            <Box as="picture">
-              <Img
-                as="source"
-                srcSet={imageLink}
-                ref={image}
-                media={'(min-width: 768px)'}
-              />
-              <Img src={mobileImageLink} />
-            </Box>
-            <Tags tags={tags} hovering={hovering} />
-          </Flex>
-        </a>
-      </Link>
+      <Flex
+        position="relative"
+        width={['100vw', '100vw', '400px', '500px']}
+        color="text"
+        justifyContent="center"
+      >
+        <Box
+          position="absolute"
+          top="0"
+          left="0"
+          width="100%"
+          height="100%"
+          zIndex="10"
+          ref={overlay}
+        />
+        <Box as="picture">
+          <Img
+            as="source"
+            srcSet={imageLink}
+            ref={image}
+            media={'(min-width: 768px)'}
+          />
+          <Img src={mobileImageLink} />
+        </Box>
+        <Tags tags={tags} hovering={hovering} />
+      </Flex>
       <Flex
         pt={['md', 'md', 'sm']}
         flexDirection={['column', 'column', 'row']}
