@@ -1,5 +1,7 @@
-import styled from '@emotion/styled'
+/** @jsxImportSource @emotion/react */
 import ReactDOM, { createPortal } from 'react-dom'
+import styled from '@emotion/styled'
+import { css } from '@emotion/react'
 import { themeGet } from '@styled-system/theme-get'
 import React, { useEffect, useRef } from 'react'
 
@@ -30,7 +32,16 @@ const Cursor = () => {
     }
   }, [])
 
-  return <Circle ref={circle} />
+  return (
+    <Circle
+      css={css`
+        @media (max-width: 992px) {
+          display: none;
+        }
+      `}
+      ref={circle}
+    />
+  )
 }
 
 export default Cursor

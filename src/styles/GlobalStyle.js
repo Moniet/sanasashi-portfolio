@@ -37,6 +37,13 @@ const GlobalStyle = () => {
           font-weight: 400;
           font-display: swap;
         }
+        @font-face {
+          src: url('/fonts/Inter/Inter-Medium.ttf') format(truetype);
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 500;
+          font-display: swap;
+        }
 
         html {
           font-size: 100%;

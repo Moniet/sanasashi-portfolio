@@ -3,6 +3,8 @@ import { useState } from 'react'
 const sliderItems = [
   {
     imageLink: '/images/slider/p1.png',
+    mobileImageLink: '/images/slider/p1-mobile.png',
+    projectLink: '/case-studies/mirror',
     title: 'Mirror',
     year: '2021',
   },

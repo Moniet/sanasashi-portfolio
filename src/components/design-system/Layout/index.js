@@ -7,7 +7,7 @@ const Layout = ({ children }) => (
     bg="bg"
     width="100vw"
     height="100vh"
-    p="65px"
+    p={['md', 'md', '65px']}
     pb="0px"
     position="relative"
     overflowX="hidden"

@@ -1,7 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import { margin } from 'styled-system'
 import styled from '@emotion/styled'
-import { useThrottledFn, useWindowResize } from 'beautiful-react-hooks'
+import {
+  useMediaQuery,
+  useThrottledFn,
+  useWindowResize,
+} from 'beautiful-react-hooks'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import SliderImage from './SliderImage'
 import RightArrow from './right-arrow.svg'
@@ -17,7 +21,6 @@ const Container = styled(Flex)`
   display: flex;
   flex-direction: column;
   height: auto;
-  margin-right: -80px;
   overflow: hidden;
   flex: 1;
 `
@@ -40,19 +43,27 @@ const SliderContainer = styled(Box)`
 const scrollbarWidth = 180
 
 const ScrollbarContainer = styled.div`
-  width: ${scrollbarWidth}px;
+  width: 100px;
   height: 2px;
   background: #333333;
   border-radius: 20px;
   overflow: hidden;
+
+  @media (min-width: 500px) {
+    width: 180px;
+  }
 `
 
 const ScrollThumb = styled.div`
   background: #797979;
   height: 100%;
-  width: ${({ noOfItems }) => scrollbarWidth / noOfItems + 'px'};
+  width: ${({ noOfItems }) => Math.floor(100 / noOfItems) + 'px'};
   border-radius: 20px;
   transition: transform 0.3s ease;
+
+  @media (min-width: 500px) {
+    width: ${({ noOfItems }) => Math.floor(180 / noOfItems) + 'px'};
+  }
 `
 
 const Controls = styled.button`
@@ -65,12 +76,18 @@ const Scrollbar = ({
   noOfItems = () => new Error("'noOfItems' not defined"),
   count,
 }) => {
+  const isMobile = useMediaQuery('(max-width: 500px)')
+
+  const scrollbarWidth = isMobile ? 100 : 180
+
   return (
     <ScrollbarContainer>
       <ScrollThumb
         noOfItems={noOfItems}
         style={{
-          transform: `translateX(${(scrollbarWidth / noOfItems) * count}px`,
+          transform: `translateX(${
+            Math.floor(scrollbarWidth / noOfItems) * count
+          }px`,
         }}
       />
     </ScrollbarContainer>
@@ -82,7 +99,7 @@ export const SliderControls = ({
   setCount,
   sliderItems = Array(3).fill(''),
 }) => (
-  <Flex alignItems="center" justifyContent="center" pt="xl">
+  <Flex alignItems="center" justifyContent="center" pt={['lg', 'lg', 'xl']}>
     <Box pr="md">
       <Text fontSize="xs" as="span" color="text">
         {count < 9 ? '0' + (count + 1) : count + 1}
@@ -115,6 +132,7 @@ const Slider = ({ count, sliderItems, setCount }) => {
   const [mounted, setMounted] = useState(false)
   const [windowSize, setWindowSize] = useState(false)
   const [scrollWidth, setScrollWidth] = useState(0)
+  const isMobile = useMediaQuery('(max-width: 500px)')
 
   useWindowResize(
     useThrottledFn(() => {
@@ -124,6 +142,7 @@ const Slider = ({ count, sliderItems, setCount }) => {
 
   const imageWidth = useMemo(
     () => scrollWidth / sliderItems.length,
+
     [scrollWidth]
   )
 
@@ -138,7 +157,9 @@ const Slider = ({ count, sliderItems, setCount }) => {
 
   useEffect(() => {
     const left = imageWidth * count
-    container.current.style.transform = `translateX(-${left + 40}px)`
+    container.current.style.transform = `translateX(${
+      isMobile ? window.innerWidth - left - 32 : -1 * left + 40
+    }px)`
   }, [count])
 
   useEffect(() => {
@@ -146,15 +167,15 @@ const Slider = ({ count, sliderItems, setCount }) => {
   }, [])
 
   return (
-    <Container>
-      <Swipe onSwipeLeft={onSwipeLeft} onSwipeRight={onSwipeRight}>
-        <SliderContainer ref={container} ml={[0, '3rem', '5rem', 'xl']}>
+    <Swipe onSwipeLeft={onSwipeLeft} onSwipeRight={onSwipeRight}>
+      <Container>
+        <SliderContainer ref={container} ml={[0, 0, '3rem', 'xl']}>
           {sliderItems.map((item, i) => (
             <SliderImage index={i} count={count} {...item} key={i} />
           ))}
         </SliderContainer>
-      </Swipe>
-    </Container>
+      </Container>
+    </Swipe>
   )
 }
 

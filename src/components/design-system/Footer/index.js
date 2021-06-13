@@ -7,13 +7,24 @@ import Text from '../../helpers/Text'
 
 const Footer = (props) => (
   <footer>
-    <Flex justifyContent="space-between" alignItems="center" py="lg" {...props}>
-      <Flex alignItems="center">
-        <Text as="h2" fontSize="3rem">
+    <Flex
+      flexDirection={['column', , 'row']}
+      justifyContent={'space-between'}
+      alignItems={['flex-start', , 'center']}
+      py="lg"
+      {...props}
+    >
+      <Flex alignItems="center" mr="md">
+        <Text as="h2" fontSize={['2rem', , '3rem']}>
           LET'S WORK <br />
           TOGETHER
         </Text>
-        <Box height="2px" width="100px" bg="text" ml="md" />
+        <Box
+          height="2px"
+          width={['0px', '30px', '60px', '80px', , '100px']}
+          bg="text"
+          ml="md"
+        />
       </Flex>
       <Box color="text">
         <Text as="div" fontSize="xxs">

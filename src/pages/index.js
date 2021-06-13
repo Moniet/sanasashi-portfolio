@@ -17,16 +17,24 @@ export default function Home() {
       <Head>
         <title>Sanjana Sashikumar | UX Designer</title>
       </Head>
-      <Flex height="100%" width="100%" alignItems="center">
+      <Box mt={['xl', 'xl', '65px']} />
+      <Flex
+        minHeight="100%"
+        width="100%"
+        alignItems="center"
+        flexDirection={['column', 'column', 'row']}
+        // justifyContent={['center', 'center', 'flex-start']}
+      >
         <Flex
           flexDirection="column"
           minWidth={['auto', 'auto', '200px', '250px']}
         >
-          <Text fontSize="xs" mb={0}>
+          <Text fontSize="xs" mb={0} textAlign={['center', 'center', 'left']}>
             I’m a UX Designer crafting User-Centric products through Minimal,
             Effective and Inclusive design.{' '}
           </Text>
         </Flex>
+        <Box mt={['xl', 'xl', '65px']} />
         <Flex
           pl={(0, 0, 0, 'sm', 'md', 'lg')}
           height="100%"
@@ -35,7 +43,11 @@ export default function Home() {
         >
           <Slider {...sliderProps} />
         </Flex>
-        <Box position="absolute" bottom="lg" right="65px">
+        <Box
+          position={['relative', 'relative', 'absolute']}
+          bottom={['sm', 'sm', 'lg']}
+          right={[1 / 2, 1 / 2, '65px']}
+        >
           <SliderControls {...sliderProps} />
         </Box>
       </Flex>

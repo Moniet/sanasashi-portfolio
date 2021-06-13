@@ -59,6 +59,7 @@ const Tags = ({ tags = ['No tags :('], hovering = false }) => (
 
 const SliderImage = ({
   imageLink = '/',
+  mobileImageLink = '/',
   projectLink = '/',
   category = 'Website Design',
   title = 'Title',
@@ -81,8 +82,9 @@ const SliderImage = ({
         <a>
           <Flex
             position="relative"
-            width={['300px', '350px', '400px', '500px']}
+            width={['100vw', '100vw', '400px', '500px']}
             color="text"
+            justifyContent="center"
           >
             <Box
               position="absolute"
@@ -93,12 +95,26 @@ const SliderImage = ({
               zIndex="10"
               ref={overlay}
             />
-            <Img src={imageLink} ref={image} />
+            <Box as="picture">
+              <Img
+                as="source"
+                srcSet={imageLink}
+                ref={image}
+                media={'(min-width: 768px)'}
+              />
+              <Img src={mobileImageLink} />
+            </Box>
             <Tags tags={tags} hovering={hovering} />
           </Flex>
         </a>
       </Link>
-      <Flex pt="xs" justifyContent="space-between">
+      <Flex
+        pt={['md', 'md', 'sm']}
+        flexDirection={['column', 'column', 'row']}
+        justifyContent={['space-between']}
+        alignItems="center"
+        height={['50px', '80px', 'auto']}
+      >
         <Text color="text" fontSize="xxs" p={0} m={0} css={{ flex: '1' }}>
           {index + 1 < 10 ? `0${index + 1}` : index} - {category}
         </Text>
@@ -122,6 +138,7 @@ const SliderImage = ({
         top="0"
         right="-1.5rem"
         css={{ writingMode: 'vertical-lr' }}
+        display={['none', 'none', 'block']}
       >
         <Text fontSize="0.6rem">{year}</Text>
       </Box>
