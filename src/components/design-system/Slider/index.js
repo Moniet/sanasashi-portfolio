@@ -158,11 +158,13 @@ const Slider = ({ count, sliderItems, setCount }) => {
 
   const prevCount = useRef(0)
 
+  console.log(isMobile)
+
   useEffect(() => {
     const left = imageWidth * count
-    container.current.style.transform = `translateX(${
-      isMobile ? window.innerWidth - left - 32 : -1 * left + 40
-    }px)`
+    container.current.style.transform = isMobile
+      ? `translateX(${142 + 100 * count * (count == 0 ? 1 : -1)}vw)`
+      : `translateX(${-1 * left + 40}px)`
   }, [count])
 
   useEffect(() => {

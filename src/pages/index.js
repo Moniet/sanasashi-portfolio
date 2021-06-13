@@ -37,7 +37,7 @@ export default function Home() {
         <Box mt={['xl', 'xl', '65px']} />
         <Flex
           pl={(0, 0, 0, 'sm', 'md', 'lg')}
-          height="100%"
+          height={['auto', 'auto', 1]}
           position="relative"
           alignItems="center"
         >

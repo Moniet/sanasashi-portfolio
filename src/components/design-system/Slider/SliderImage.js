@@ -90,7 +90,7 @@ const SliderImage = ({
     >
       <Flex
         position="relative"
-        width={['100vw', '100vw', '400px', '500px']}
+        width={['300px', '100vw', '400px', '500px']}
         color="text"
         justifyContent="center"
       >
