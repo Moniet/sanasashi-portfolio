@@ -136,12 +136,6 @@ const Slider = ({ count, sliderItems, setCount }) => {
   const router = useRouter()
   const [mouseOverProjectIndex, setMouseOverProjectIndex] = useState(0)
 
-  useWindowResize(
-    useThrottledFn(() => {
-      setWindowSize(setScrollWidth(container.current?.scrollWidth))
-    })
-  )
-
   const imageWidth = useMemo(
     () => scrollWidth / sliderItems.length,
 
