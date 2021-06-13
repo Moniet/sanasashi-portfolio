@@ -120,7 +120,7 @@ const Phoenix = () => (
     </ParaCenter>
 
     <img src="https://s3-alpha-sig.figma.com/img/1bda/736e/da1529a3ead649147dd1a83cac17d634?Expires=1624233600&Signature=H~xPsJ~qCZqba2DUNbVPxYfWvfGdTjYXAKjyIOdVQvd3F4xfdd-z8CNOaS8uBq~COePHalu9xaRT~MafYBxiLC~C4FKUuNQmO~5g-P0xKWkdp-yK79ZP5N~G0LcRyE6ea1TsRzgs5cGBxNjB8~ALhmFHrWVqckVLjWAR~B8tPvLZuZrF4gQFHqN5l9J1txFEzdyWGg7zTsvNtDvsS1zyM4276rnXBdGvUVX6Oltsf2lPxGje0cNcbOART6S17Df-eAXK~QVWVn3VnZLLgCqBCfh3v0ZouoLgASyp70y9HSd-ccYdku3DujlRa~BtL8KUELn1jiIkeWikd1evTGUltA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
-    <img src="https://s3-alpha-sig.figma.com/img/7410/2070/1a86118dd90ffc1cc122e1c70b69400a?Expires=1624233600&Signature=KMXp1EHQyN4gzs9-4AvgWRTa2bnowagPUF96HXnlbhQdBos179DpNNS5VFTpUfVRq5-r8YceYbsaklLFrykQ9WVgt~0L1hrPiJ9rkoqCPTMb8gEnt5IsAj88qZ18A06DTZSMysR6QbV1pPfEK-48K3PO8Issi5JkkTj-ISSnC0m2qJyX5~E9q3CXtMLUsqy4remJOvbNdFYX~q6INYbZz4kudNvd46udobEA9P2r8Y0nwa6MYqocK0yXg7~hGkm3DFQw2Itqy~4hGDOa8aLCL0o8jOGIy17UjXO6jCVTJ4L1DyUvatz32XlKmNF5qVQaw6MpWEEXJQagi1VKxWCK5w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
+    <img src="https://s3-alpha-sig.figma.com/img/4616/0715/67dcdfa04477d3d89894c0b7e8405d90?Expires=1624233600&Signature=ZFggSqy9BGASl8YR82eqRYOj9ry46TlxQ3juXtlCqASuRXAZ0OKx73Rpy2Te97w~~3b9WwP9zMWKZsYgSYyqbNEuN5lBEV8bTXi5b6oEHQf-1-rY5KrBss2SjFwurxAm~ujWxUZUMl6TCzKm~rh~JH-leot1DSGzgDwMh9WWWEpEE54pmDFdo0bEbAXY8enZzgOWwoP8vzlruOirn7lGG5hXHA0M~smbQoBgweQy2NOpQMS8kCjfjszWJGCvoTUYD8o0pmSvEGoEUcp3sIf7lrGiJojceCssjamoGxhH20h6xDaMgJSg22OfADUwJmmHWoGxjAvv8pYB-xQGHYOIsA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
 
     <ParaCenter>
       A minimal layout with a combination of a serif font for headings and sans
