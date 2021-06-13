@@ -7,7 +7,6 @@ import CaseStudy, {
   ResponsiveGrid,
   Ul,
 } from '../../components/design-system/CaseStudy'
-import Grid from '../../components/helpers/Grid'
 
 const Mirror = () => (
   <CaseStudy
@@ -79,7 +78,7 @@ const Mirror = () => (
         Wireframes of the layout of the website after developing sitemaps and
         user flows. My ideas were solidified through user research and it
         allowed me to design a layout that would meet user expecttions and
-        therefore alcasslow for a more positive shopping experience overall.
+        therefore allows for a more positive shopping experience overall.
       </Para>
     </ParaWithHeaderLeft>
     <ParaWithHeaderLeft>
@@ -146,7 +145,7 @@ const Mirror = () => (
     <ParaCenter>
       The website is designed to be responsive - ensuring the page is available
       and renders well on all devices. This ensures the brand can tap into the
-      online e-ommerce market effectively.
+      online e-commerce market effectively.
     </ParaCenter>
     <img src="/images/case-study/mirror-responsive.png" />
     <ParaWithHeaderLeft header="Usability">
