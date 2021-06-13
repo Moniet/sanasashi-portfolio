@@ -151,16 +151,27 @@ const Mirror = () => (
     <img src="/images/case-study/mirror-responsive.png" />
     <ParaWithHeaderLeft header="Usability">
       <Para>
-        The website is designed to be responsive - ensuring the page is
-        available and renders well on all devices. This ensures the brand can
-        tap into the online e-ommerce market effectively.
+        Once I had finished visual design and creating a prototype, it was time
+        to put my design to the test. I sought out to do some usability testing
+        with a few main objectives.
       </Para>
+
+      <Ul
+        list={[
+          'Test overall ease of use and effectiveness of navigation when browsing through the website. ',
+          'Test for seamless search (when looking for a specific product, test how users prefer to search) and checkout process. To test if users are able to complete intended tasks without difficulty. ',
+          'Test if the design is clear and intuitive and provides enough information to the user.',
+        ]}
+      />
     </ParaWithHeaderLeft>
     <ParaWithHeaderLeft header="Conclusion">
       <Para>
-        The website is designed to be responsive - ensuring the page is
-        available and renders well on all devices. This ensures the brand can
-        tap into the online e-ommerce market effectively.
+        Overall, the participants liked the minimal and clean aesthetic of the
+        website. A 100% success rate (usability testing) shows how effective the
+        modern, simple UI for Mirror is. The participants found the flow of the
+        website intuitive and easy to navigate through and got through to the
+        end of the prototype without any trouble. They were successfully able to
+        complete the tasks and reach the checkout page during testing.
       </Para>
     </ParaWithHeaderLeft>
   </CaseStudy>
