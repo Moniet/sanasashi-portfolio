@@ -11,7 +11,7 @@ import Grid from '../../components/helpers/Grid'
 
 const Phoenix = () => (
   <CaseStudy
-    header="Phoenix Medical Systems"
+    header="Phoenix Medical Systems:"
     description="Responsive Website re-design"
     projectBrief="Design a fully responsive website for Phoenix, making it easy and intuitive to use while ensuring it looks professional and modern."
     whatIDid="Given the project brief I worked on developing a seamless user experience that is intuitive with a clutter free layout while employing modern, relevant UX methods."
@@ -138,14 +138,16 @@ const Phoenix = () => (
     </ParaCenter>
     <img src="/images/case-study/phoenix-responsive.png" />
     <ParaWithHeaderLeft header="Conclusion">
-      Although I was unable to conduct usability tests due to the time
-      constraint, I recieved constructive feedback from my client and made
-      iterations to my design. Overall, I was able to design a minimal and
-      professional looking website for the company and meet the expectations of
-      the client. This design has only necessary text and showcases the
-      company’s products in a better manner. The client found the flow of the
-      website intuitive and believes the aligns with both the user goals and
-      business goals.
+      <Para>
+        Although I was unable to conduct usability tests due to the time
+        constraint, I recieved constructive feedback from my client and made
+        iterations to my design. Overall, I was able to design a minimal and
+        professional looking website for the company and meet the expectations
+        of the client. This design has only necessary text and showcases the
+        company’s products in a better manner. The client found the flow of the
+        website intuitive and believes the aligns with both the user goals and
+        business goals.
+      </Para>
     </ParaWithHeaderLeft>
   </CaseStudy>
 )

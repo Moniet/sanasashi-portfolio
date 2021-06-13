@@ -7,11 +7,10 @@ import CaseStudy, {
   ResponsiveGrid,
   Ul,
 } from '../../components/design-system/CaseStudy'
-import Grid from '../../components/helpers/Grid'
 
 const StreamNet = () => (
   <CaseStudy
-    header="Stream Net Medical Systems"
+    header="Stream Net Medical Systems:"
     introduction="StreamNet is an MVP for an app that primarily serves as a medium  for users to stream content from their favourite platforms while video conferencing with friends or family. The goal - a frictionless video streaming environment."
     description="App MVP design"
     projectBrief="The goal of this project is to create an app concept constrained to its minimum viable product (MVP)."

@@ -150,14 +150,18 @@ const Mirror = () => (
     </ParaCenter>
     <img src="/images/case-study/mirror-responsive.png" />
     <ParaWithHeaderLeft header="Usability">
-      The website is designed to be responsive - ensuring the page is available
-      and renders well on all devices. This ensures the brand can tap into the
-      online e-ommerce market effectively.
+      <Para>
+        The website is designed to be responsive - ensuring the page is
+        available and renders well on all devices. This ensures the brand can
+        tap into the online e-ommerce market effectively.
+      </Para>
     </ParaWithHeaderLeft>
     <ParaWithHeaderLeft header="Conclusion">
-      The website is designed to be responsive - ensuring the page is available
-      and renders well on all devices. This ensures the brand can tap into the
-      online e-ommerce market effectively.
+      <Para>
+        The website is designed to be responsive - ensuring the page is
+        available and renders well on all devices. This ensures the brand can
+        tap into the online e-ommerce market effectively.
+      </Para>
     </ParaWithHeaderLeft>
   </CaseStudy>
 )
