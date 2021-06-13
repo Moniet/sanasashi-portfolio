@@ -123,9 +123,10 @@ const StreamNet = () => (
 
     <img src="/images/case-study/stream-net-8.png" />
     <ParaCenter>
-      The website is designed to be responsive - ensuring the page is available
-      and renders well on all devices. This ensures the brand can tap into the
-      online e-ommerce market effectively.
+      Discovery research and a clearly framed user problem statement took the
+      forefront of my project - validating the need for a product like this. My
+      hope through building this product is to help users better connect with
+      friends and family by creating a more engaging virtual environment.
     </ParaCenter>
   </CaseStudy>
 )
