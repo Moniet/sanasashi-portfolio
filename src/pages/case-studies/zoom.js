@@ -10,7 +10,7 @@ import CaseStudy, {
 
 const Zoom = () => (
   <CaseStudy
-    header="Zoom:"
+    header="Zoom"
     description="Add a feautre to an existing app"
     introduction="Zoom Video Communications, Inc. (or Zoom) is an American communications technology company. It provides video call and online chat services through a cloud-based peer-to-peer software platform. "
     projectBrief="Zoom an established, successful video conferencing app wishes to add a feature to help organise invites/meeting links within the mobile app and help reduce clutter."

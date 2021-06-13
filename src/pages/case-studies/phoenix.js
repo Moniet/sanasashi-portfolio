@@ -11,7 +11,7 @@ import Grid from '../../components/helpers/Grid'
 
 const Phoenix = () => (
   <CaseStudy
-    header="Phoenix Medical Systems:"
+    header="Phoenix Medical Systems"
     description="Responsive Website re-design"
     projectBrief="Design a fully responsive website for Phoenix, making it easy and intuitive to use while ensuring it looks professional and modern."
     whatIDid="Given the project brief I worked on developing a seamless user experience that is intuitive with a clutter free layout while employing modern, relevant UX methods."
