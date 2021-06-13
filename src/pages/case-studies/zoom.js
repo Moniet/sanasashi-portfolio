@@ -99,6 +99,7 @@ const Zoom = () => (
       <img src="/images/case-study/zoom-2.png" />
       <img src="/images/case-study/zoom-3.png" />
       <img src="/images/case-study/zoom-4.png" />
+      <img src="/images/case-study/zoom-5.png" />
     </ResponsiveGrid>
     <ParaCenter>
       Since the goal was to semalessly add a feature, it was important that I
@@ -106,9 +107,8 @@ const Zoom = () => (
       new feature would make the most sense within the given framework.
     </ParaCenter>
 
-    <img src="/images/case-study/stream-net-5.png" />
-    <img src="/images/case-study/stream-net-6.png" />
-    <img src="/images/case-study/stream-net-7.png" />
+    <img src="/images/case-study/zoom-6.png" />
+    <img src="/images/case-study/zoom-7.png" />
 
     <ParaCenter>
       The feature that I had settled upon based off user needs was implementing
@@ -116,8 +116,8 @@ const Zoom = () => (
       how users could schedule a meeting and create a poll and also wanted to
       establish what it would be like to receive a poll request.
     </ParaCenter>
+    <img src="/images/case-study/zoom-8.png" />
 
-    <img src="/images/case-study/stream-net-8.png" />
     <ParaCenter>
       Working on this project taught me how to work within the constraints of an
       existing product and use existing design systems. I had to ensure I design
