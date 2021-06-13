@@ -10,7 +10,7 @@ const theme = {
   fontSizes: {
     xxs: '0.7rem',
     xs: '0.833rem',
-    sm: '1.2rem',
+    sm: '1rem',
     md: '1.44rem',
     lg: '1.728rem',
     xl: '2.074rem',
