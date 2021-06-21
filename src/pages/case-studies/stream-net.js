@@ -45,6 +45,11 @@ const StreamNet = () => (
           'Understand whether or not using an app like this will help users feel more connected with family and friends in the absence of social settings. ',
         ]}
       />
+    </ParaWithHeaderLeft>
+
+    <img src="/images/case-study/streamnet--1.png" />
+
+    <ParaWithHeaderLeft>
       <Para>
         Methods: <br />
         For the purpose of this project, I carried out secondary research
@@ -67,6 +72,9 @@ const StreamNet = () => (
         additional features to increase user engagement.
       </Para>
     </ParaWithHeaderLeft>
+
+    <img src="/images/case-study/streamnet--2.png" />
+
     <ParaWithHeaderLeft header="Ideation">
       <Para>
         Through conducting user interviews I was able to identify features that

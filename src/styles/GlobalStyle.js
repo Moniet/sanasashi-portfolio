@@ -64,6 +64,10 @@ const GlobalStyle = () => {
           margin-bottom: 1rem;
         }
 
+        p::empty {
+          display: none;
+        }
+
         h1,
         h2,
         h3,

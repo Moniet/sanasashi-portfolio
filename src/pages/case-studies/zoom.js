@@ -40,6 +40,10 @@ const Zoom = () => (
           'Understand whether or not Zoom affects users adversely and if yes, how (Validate ‘Zoom Fatigue’)',
         ]}
       />
+    </ParaWithHeaderLeft>
+
+    <img src="/images/case-study/zoom--1.png" />
+    <ParaWithHeaderLeft>
       <Para>
         Methods: <br />I carried out secondary research (competitor analysis) to
         identify video conferencing apps with similar features and conducted
@@ -64,6 +68,8 @@ const Zoom = () => (
         and schedule meetings with ease.
       </Para>
     </ParaWithHeaderLeft>
+
+    <img src="/images/case-study/zoom--2.png" />
     <ParaWithHeaderLeft header="Ideation">
       <Para>
         Since I was working with an existing information architecture I worked

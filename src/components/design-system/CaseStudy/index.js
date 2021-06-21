@@ -74,7 +74,7 @@ export const ParaWithHeader = (props) => (
 
 export const ParaWithHeaderLeft = ({ children, header }) => (
   <ResponsiveGrid columns="5" gridGap={[0, , 'xl']}>
-    <Grid gridColumn="span 1" width="100px">
+    <Grid gridColumn="span 1" width="100px" css={{ whiteSpace: 'nowrap' }}>
       <Header>{header}</Header>
     </Grid>
     <Grid gridColumn="span 4">{children}</Grid>
