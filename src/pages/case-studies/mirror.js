@@ -17,7 +17,7 @@ const Mirror = () => (
     metadata={[
       ['scope', '2 weeks'],
       ['project type', "project for designlab's ux academy"],
-      ['tools used', 'figma, whimsical', 'optimalsort'],
+      ['tools used', 'figma, whimsical, optimalsort'],
     ]}
     projectBrief="Design a responsive e-commerce website that is easy to use and allows customers to browse through all products and filter by size, color, style, etc.
     "
@@ -36,12 +36,7 @@ const Mirror = () => (
       categories: ['interaction design ', ' ui design'],
     }}
   >
-    <ParaWithHeader
-      large
-      width="min(100%, 500px)"
-      header="Phase 1 : discover"
-      center
-    >
+    <ParaWithHeader width="min(100%, 500px)" header="Phase 1 : discover" center>
       <Para>
         At this stage primary and secondary research was conducted in order to
         gain deeper insights into existing user pain-points based on inquires
@@ -152,7 +147,7 @@ const Mirror = () => (
       </Para>
     </ParaWithHeaderLeft>
 
-    <ParaWithHeader header="How might we :">
+    <ParaWithHeader header="How might we :" width="100%">
       <Metadata
         metadata={[
           [
@@ -256,6 +251,8 @@ const Mirror = () => (
       </Para>
     </ParaWithHeaderLeft>
 
+    <hr />
+
     <ParaWithHeader
       large
       width="min(100%, 600px)"
@@ -330,6 +327,8 @@ const Mirror = () => (
     </ParaCenter>
     <img src="/images/case-study/mirror-responsive.png" />
 
+    <hr />
+
     <ParaWithHeader large width="min(100%, 600px)" header="Phase 4 : Test">
       <Para>
         Once I had finished visual design and creating a prototype (using
@@ -352,7 +351,7 @@ const Mirror = () => (
       alt=""
     />
 
-    <ParaWithHeaderLeft header="Conclusion">
+    <ParaWithHeader>
       <Para>
         Overall, the participants liked the minimal and clean aesthetic of the
         website. A 100% success rate (usability testing) shows how effective the
@@ -361,7 +360,7 @@ const Mirror = () => (
         end of the prototype without any trouble. They were successfully able to
         complete the tasks and reach the checkout page during testing.
       </Para>
-    </ParaWithHeaderLeft>
+    </ParaWithHeader>
   </CaseStudy>
 )
 

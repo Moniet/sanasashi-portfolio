@@ -65,6 +65,7 @@ export const ParaWithHeader = (props) => (
   <Flex
     flexDirection={['column', , props.flexDirection]}
     flex="1"
+    width="min(100%, 500px)"
     {...props}
     mr="auto"
   >
@@ -150,7 +151,11 @@ const CaseStudy = ({
   introduction = 'adsfadsf asdfasfasf asdfasdf asdf',
   projectBrief = dummmyText,
   whatIDid = dummmyText,
-  metadata = [['key', 'value']],
+  metadata = [
+    ['scope', '2 weeks'],
+    ['project type', "project for designlab's ux academy"],
+    ['tools used', 'figma, whimsical, optimalsort'],
+  ],
   tags = ['asdfdasasdf', 'asdfasasdf', 'asdfasdfd'],
   nextCaseStudy = {
     href: '/',
