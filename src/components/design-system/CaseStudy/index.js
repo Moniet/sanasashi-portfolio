@@ -8,6 +8,7 @@ import Text from '../../helpers/Text'
 import LeftArroww from '../../icons/left-arrow.svg'
 import RightArrowWithCircle from '../../icons/right-arrow-w-circle.svg'
 import Footer from '../Footer'
+import Layout from '../Layout'
 
 const dummmyText =
   'aosdfnoaidnfoasnd aisdnf asidn foas nfao sdo andsoafs doifnas odin sadinf aso '
@@ -54,9 +55,9 @@ export const Ul = (props) => (
   </Flex>
 )
 
-const Header = ({ children }) => (
-  <Text fontWeight="500" fontSize="20px" color="text">
-    {children}
+const Header = (props) => (
+  <Text fontWeight="500" fontSize="20px" color="text" {...props}>
+    {props.children}
   </Text>
 )
 
@@ -67,19 +68,31 @@ export const ParaWithHeader = (props) => (
     {...props}
     mr="auto"
   >
-    <Header {...props}>{props.header}</Header>
+    {!props.large && <Header {...props}>{props.header}</Header>}
+    {props.large && <h1 {...props}>{props.header}</h1>}
     <div>{props.children}</div>
   </Flex>
 )
 
-export const ParaWithHeaderLeft = ({ children, header }) => (
-  <ResponsiveGrid columns="5" gridGap={[0, , 'xl']}>
-    <Grid gridColumn="span 1" width="100px" css={{ whiteSpace: 'nowrap' }}>
-      <Header>{header}</Header>
-    </Grid>
-    <Grid gridColumn="span 4">{children}</Grid>
-  </ResponsiveGrid>
-)
+export const ParaWithHeaderLeft = (props) => {
+  const { children, header, large = false } = props
+
+  return (
+    <ResponsiveGrid columns="5" gridGap={[0, , 'xl']}>
+      <Grid gridColumn="span 1" width="100px">
+        {!large && <Header {...props}>{header}</Header>}
+        {large && (
+          <Text as="h1" {...props}>
+            {header}
+          </Text>
+        )}
+      </Grid>
+      <Grid gridColumn="span 4">
+        <Box width="min(100%, 600px)">{children}</Box>
+      </Grid>
+    </ResponsiveGrid>
+  )
+}
 
 export const FullWidthImg = ({ src }) => (
   <Box mx={['-2rem', '-2rem', '-4rem', '-8rem']}>
@@ -95,12 +108,49 @@ export const ParaCenter = (props) => (
   </Box>
 )
 
+export const Metadata = ({ metadata = [['key', 'value']] }) => {
+  const length = metadata.length - 1
+  return (
+    <div>
+      {metadata.map(([KEY, VALUE], i) => (
+        <div key={i}>
+          <Flex
+            p="sm"
+            width="100%"
+            justifyContent="space-between"
+            fontSize="sm"
+            css={{ textTransform: 'uppercase' }}
+            borderTop="solid 1px"
+            borderTopColor="primary"
+            borderBottom={i === length ? 'solid 1px' : 'none'}
+            borderBottomColor={'text'}
+          >
+            <Text color="text" letterSpacing="1px" pb={0} mb={0}>
+              {KEY}
+            </Text>
+            <Text
+              color="text"
+              letterSpacing="1px"
+              pb={0}
+              mb={0}
+              textAlign="right"
+            >
+              {VALUE}
+            </Text>
+          </Flex>
+        </div>
+      ))}
+    </div>
+  )
+}
+
 const CaseStudy = ({
   header = 'Mirror',
   description = 'Website Re-design',
   introduction = 'adsfadsf asdfasfasf asdfasdf asdf',
   projectBrief = dummmyText,
   whatIDid = dummmyText,
+  metadata = [['key', 'value']],
   tags = ['asdfdasasdf', 'asdfasasdf', 'asdfasdfd'],
   nextCaseStudy = {
     href: '/',
@@ -110,12 +160,12 @@ const CaseStudy = ({
   children,
 }) => {
   return (
-    <>
+    <Layout hideNav>
       <Flex
         px={['md', 'md', 'lg', 'xl']}
         pt={['md', 'md', 'lg', 'xl']}
         pb={0}
-        width="100vw"
+        width="100%"
         justifyContent="center"
         alignItems="center"
         flexDirection="column"
@@ -139,6 +189,9 @@ const CaseStudy = ({
           <MainHeader>{header} :</MainHeader>
           <br />
           <MainHeader>{description}</MainHeader>
+          <Box pt={['xl', 'lg', , 'xl']} />
+          <Metadata metadata={metadata} />
+
           <Box pt={['xl', 'lg', , 'xl']} />
           <Text
             color="#fff"
@@ -210,7 +263,7 @@ const CaseStudy = ({
         <Box pt={['md', 0, , 'md', , 'lg']} />
         <Footer />
       </Box>
-    </>
+    </Layout>
   )
 }
 

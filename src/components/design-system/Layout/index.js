@@ -2,17 +2,18 @@ import Box from '../../helpers/Box'
 import Cursor from '../Cursor'
 import Nav from '../Nav'
 
-const Layout = ({ children }) => (
+const Layout = ({ children, hideNav }) => (
   <Box
     bg="bg"
-    width="100vw"
+    width="min(100vw, 1400px)"
     height="100vh"
+    mx="auto"
     p={['md', 'md', '65px']}
     pb="0px"
     position="relative"
     overflowX="hidden"
   >
-    <Nav />
+    {!hideNav && <Nav />}
     {children}
   </Box>
 )

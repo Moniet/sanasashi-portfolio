@@ -74,8 +74,8 @@ const GlobalStyle = () => {
         h4,
         h5 {
           margin: 3rem 0 1.38rem;
-          font-family: 'Editorial New', serif;
-          font-weight: 200;
+          font-family: 'Inter', 'Helvetica', sans-serif;
+          font-weight: 300;
           line-height: 1.3;
         }
 

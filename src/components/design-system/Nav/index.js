@@ -43,7 +43,7 @@ const Nav = () => {
   return (
     <>
       <Flex
-        width="100%"
+        width="min(100%, 1400px)"
         alignItems="center"
         justifyContent="space-between"
         as="nav"
