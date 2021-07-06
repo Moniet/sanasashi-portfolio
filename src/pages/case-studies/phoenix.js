@@ -68,7 +68,7 @@ const Phoenix = () => (
       />
     </div>
 
-    <ParaWithHeaderLeft>
+    <ParaWithHeader>
       <Para>
         Although I was unable to conduct user interviews through getting in
         touch with doctors and hospital staff, discussions with the marketing
@@ -91,7 +91,7 @@ const Phoenix = () => (
         Brand message:
         <Ul list={['Inviting', 'Trustworthy', 'Premium quality']} />
       </Para>
-    </ParaWithHeaderLeft>
+    </ParaWithHeader>
 
     <ParaWithHeaderLeft header="Comparative and Competitive research:">
       AS TO DISCOVER THE STRENGTHS, WEAKENESSES AND OPPORUNITY AREAS OF THE
@@ -103,7 +103,7 @@ const Phoenix = () => (
       src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7314b7a9-688d-4ea6-8063-ef61736e4855/Phoenix_competitive.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210706%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210706T121122Z&X-Amz-Expires=86400&X-Amz-Signature=305217f73fa996202cccbd0004282cb08e2666eea10a15dee8dc81756b34a718&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Phoenix_competitive.jpg%22"
     />
 
-    <ParaWithHeaderLeft>
+    <ParaWithHeader>
       I carried out secondary research (competitor analysis) by comparing
       features and designs of other Maternal and Neonatal companies to better
       understand what features Phoenix’s website must have, what would be nice
@@ -112,7 +112,7 @@ const Phoenix = () => (
       <br />
       This therefore, aided in the development of a website that would address
       common pain points and in turn have a better user experience.
-    </ParaWithHeaderLeft>
+    </ParaWithHeader>
 
     <ParaWithHeader header="How might we :" width="100%">
       <Metadata
@@ -161,10 +161,9 @@ const Phoenix = () => (
         ]}
       />
 
-      <ResponsiveGrid columns={3} gridGap={['auto', 'auto', '2rem']}>
-        <Para>Must Haves:</Para>
+      <Para>
+        Must Haves:
         <Ul
-          li={{ pb: 'sm' }}
           list={[
             'Clear product images and descriptions',
             'More organised layout with minimal use of icons',
@@ -172,7 +171,7 @@ const Phoenix = () => (
             'Responsive design',
           ]}
         />
-      </ResponsiveGrid>
+      </Para>
     </ParaWithHeaderLeft>
 
     <div>
@@ -183,13 +182,13 @@ const Phoenix = () => (
       />
     </div>
 
-    <ParaWithHeaderLeft>
+    <ParaWithHeader>
       <Para>
         I worked on creating a business model canvas in order to identify the
         company's goals, this would help in developing a better website that
         reflects their brand well.
       </Para>
-    </ParaWithHeaderLeft>
+    </ParaWithHeader>
 
     <div>
       <Para fontSize="md">SITEMAP</Para>
@@ -199,13 +198,13 @@ const Phoenix = () => (
       />
     </div>
 
-    <ParaWithHeaderLeft>
+    <ParaWithHeader>
       <Para>
         As this is an existing website, I worked on the company's current
         sitemap - including only necessary menu items and organizing the website
         layout better.
       </Para>
-    </ParaWithHeaderLeft>
+    </ParaWithHeader>
     <div>
       <Para fontSize="md">USER FLOW</Para>
       <img
@@ -214,12 +213,12 @@ const Phoenix = () => (
       />
     </div>
 
-    <ParaWithHeaderLeft>
+    <ParaWithHeader>
       <Para>
         Using the flow chart I have represented the task flow - how a user would
         find the website and search for the desired product
       </Para>
-    </ParaWithHeaderLeft>
+    </ParaWithHeader>
     <hr />
 
     <ParaWithHeader header="Phase 3: Design" large></ParaWithHeader>
@@ -228,7 +227,7 @@ const Phoenix = () => (
       <img src="/images/case-study/phoenix-1.png" />
     </div>
 
-    <ParaCenter>
+    <ParaWithHeader>
       Using the sitemap as a guide, I'd identified key pages that I would be
       designing for - keeping the navigation of the website simple. I began by
       creating lo-fidelity wireframes of the website on Figma in order to gain
@@ -240,7 +239,7 @@ const Phoenix = () => (
       Once the team was satisfied with the designs, I worked on a few
       explorations of how Phoenix could be expressed visually. It was also
       during this phase that the brand was given a modern, clean look.
-    </ParaCenter>
+    </ParaWithHeader>
     <ResponsiveGrid columns={2}>
       <ParaWithHeader header="The Objective">
         <Para>

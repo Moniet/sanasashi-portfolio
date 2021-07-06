@@ -72,7 +72,7 @@ const Mirror = () => (
       alt=""
     />
 
-    <ParaWithHeaderLeft>
+    <ParaWithHeader>
       I interviewed 4 participants to hear first hand their stories of how they
       use the service and what role it plays in their lives. Conducting 1:1
       interviews with the user gives an understanding of how a user thinks.
@@ -82,7 +82,7 @@ const Mirror = () => (
       expectations and needs of the user (empathy map). Analytics data to see
       where site visitors and site subscribers spend most of their time helped
       in identifying features that required iteration.
-    </ParaWithHeaderLeft>
+    </ParaWithHeader>
     <ParaWithHeaderLeft header="Comparative and Competitive research:">
       <Para>
         FOR IDENTIFYING THE STRENGTHS, WEAKENESSES AND OPPORUNITY AREAS OF THE
@@ -93,7 +93,7 @@ const Mirror = () => (
       src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e73ac098-351a-4af5-9517-a27a3ee931ea/Mirror_competitive.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210706%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210706T095051Z&X-Amz-Expires=86400&X-Amz-Signature=66831df43719f25be41890cb10d816a25c20090c2361af0054be8e99726b51fa&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Mirror_competitive.jpg%22"
       alt=""
     />
-    <ParaWithHeaderLeft>
+    <ParaWithHeader>
       <Para>
         I identified strengths and weaknesses of 4 popular shopping websites.
         This was done to see what our competitors offer and at what price
@@ -103,7 +103,7 @@ const Mirror = () => (
         idea of what the brand could do differently. Customer reviews also
         helped in identifying common unaddressed issues.
       </Para>
-    </ParaWithHeaderLeft>
+    </ParaWithHeader>
 
     <ParaWithHeaderLeft header="INTERVIEW RESULTS">
       <Para>
@@ -185,7 +185,7 @@ const Mirror = () => (
         alt=""
       />
     </div>
-    <ParaWithHeaderLeft>
+    <ParaWithHeader>
       <Para>
         This persona helped in developing potential informed solutions through
         an improved understanding of the user's contexts, backgrounds, needs,
@@ -218,7 +218,7 @@ const Mirror = () => (
       During this phase of the design process, a sitemap was created and user
       flows were determined, again informed by research and in constant
       reference to the user persona.
-    </ParaWithHeaderLeft>
+    </ParaWithHeader>
 
     <div>
       <Para fontSize="md">SITEMAP</Para>
@@ -227,13 +227,13 @@ const Mirror = () => (
         alt=""
       />
     </div>
-    <ParaWithHeaderLeft>
+    <ParaWithHeader>
       <Para>
         A site map was crucial to lay out the overall structure of the website.
         I also broke-down the product categories into sub categories, as well as
         determined the filter and sort criteria that were to be present.
       </Para>
-    </ParaWithHeaderLeft>
+    </ParaWithHeader>
 
     <div>
       <Para fontSize="md">USER FLOW</Para>
@@ -242,14 +242,14 @@ const Mirror = () => (
         alt=""
       />
     </div>
-    <ParaWithHeaderLeft>
+    <ParaWithHeader>
       <Para>
         I developed a user flow for the buying process with the persona I'd
         created. This shows: How my persona discovered the page/ product, how
         she browses for a desired product, how she adds items to cart and
         finally the check out process.
       </Para>
-    </ParaWithHeaderLeft>
+    </ParaWithHeader>
 
     <hr />
 
@@ -267,7 +267,7 @@ const Mirror = () => (
       />
     </div>
 
-    <ParaWithHeaderLeft>
+    <ParaWithHeader>
       <Para>
         Once I'd identified the key pages that I would be designing, I began
         sketching the pages of the website that I would later translate into
@@ -278,7 +278,7 @@ const Mirror = () => (
         Informed by the previous phases in the design process, the UI began to
         take shape.
       </Para>
-    </ParaWithHeaderLeft>
+    </ParaWithHeader>
 
     <ResponsiveGrid columns={2}>
       <ParaWithHeader header="The Objective">
