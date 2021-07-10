@@ -3,11 +3,12 @@ import CaseStudy, {
   Para,
   ParaWithHeader,
   ParaCenter,
-  ParaWithHeaderLeft,
   ResponsiveGrid,
   Ul,
   Metadata,
+  ImageWrapper,
 } from '../../components/design-system/CaseStudy'
+import Lightbox from '../../components/helpers/Lightbox'
 
 const StreamNet = () => (
   <CaseStudy
@@ -47,7 +48,7 @@ const StreamNet = () => (
         this.
       </Para>
     </ParaWithHeader>
-    <ParaWithHeaderLeft header="Research">
+    <ParaWithHeader header="Research">
       <Para>
         Goal: <br />
         Understand and learn how existing users stream content together while
@@ -65,19 +66,19 @@ const StreamNet = () => (
           'Understand whether or not using an app like this will help users feel more connected with family and friends in the absence of social settings. ',
         ]}
       />
-    </ParaWithHeaderLeft>
+    </ParaWithHeader>
 
-    <div>
-      <ParaWithHeaderLeft header="User interviews">
+    <ImageWrapper>
+      <ParaWithHeader header="User interviews">
         <Para>
           ESTABLISHING A FOUNDATIONAL UNDERSTANDING OF THE PROBLEM THROUGH USER
           INTERVIEWS
         </Para>
-      </ParaWithHeaderLeft>
-      <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/649e092e-388e-4b56-a9a4-d094aba8e751/StreamNet_user_interview.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210706%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210706T130127Z&X-Amz-Expires=86400&X-Amz-Signature=8bbc9c192e11c2a8397b2ce7eb3d11f17e4252e7281f86889c02cbbfc0674fff&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22StreamNet_user_interview.jpg%22" />
-    </div>
+      </ParaWithHeader>
+      <img src="/images/case-study/streamnet-user-interviews.jpg" />
+    </ImageWrapper>
 
-    <ParaWithHeaderLeft>
+    <ParaWithHeader>
       <Para>
         For the purpose of this project, I carried out secondary research
         (competitor analysis) and conducted user interviews that helped me
@@ -92,18 +93,20 @@ const StreamNet = () => (
         Android phones. I therefore interviewed 4 Zoom users between the ages 18
         to 57.
       </Para>
-    </ParaWithHeaderLeft>
+    </ParaWithHeader>
 
-    <div>
-      <ParaWithHeaderLeft header="Comparative and Competitive research:">
-        AS TO IDENTIFY THE STRENGTHS, WEAKENESSES AND OPPORUNITY AREAS OF THE
-        CURRENT MARKET COMPETITIVE ANALYSIS WAS CARRIED OUT
-      </ParaWithHeaderLeft>
+    <ImageWrapper>
+      <ParaWithHeader header="Comparative and Competitive research:">
+        <Para>
+          AS TO IDENTIFY THE STRENGTHS, WEAKENESSES AND OPPORUNITY AREAS OF THE
+          CURRENT MARKET COMPETITIVE ANALYSIS WAS CARRIED OUT
+        </Para>
+      </ParaWithHeader>
 
-      <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/70f9f62f-8315-4644-a5d2-11ce29a2f96c/StreamNet_competitve.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210706%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210706T131310Z&X-Amz-Expires=86400&X-Amz-Signature=1014652ffb9762183a69b41f15f7259347ac17827246e2de2ecfb3ec55292777&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22StreamNet_competitve.jpg%22" />
-    </div>
+      <Lightbox src="/images/case-study/streamnet-competitive.jpg" />
+    </ImageWrapper>
 
-    <ParaWithHeaderLeft>
+    <ParaWithHeader>
       <Para>
         Competitive analysis was conducted to explore the current market
         solutions and to understand their strengths and weaknesses as well as
@@ -112,7 +115,7 @@ const StreamNet = () => (
         <br />
         These market solutions were categorised by conventional
         (established) solutions and emerging (experimental/unpacked) as to
-        explore as many diverse approaches in the problem space.
+        explore as many ImageWrappererse approaches in the problem space.
         <br />
         <br />
         It came to to attention that there is a lack of solutions that
@@ -151,7 +154,7 @@ const StreamNet = () => (
           ]}
         />
       </Para>
-    </ParaWithHeaderLeft>
+    </ParaWithHeader>
 
     <ParaWithHeader header="How might we :">
       <Metadata
@@ -166,7 +169,7 @@ const StreamNet = () => (
       />
     </ParaWithHeader>
 
-    <ParaWithHeader header="Phase 2: define">
+    <ParaWithHeader header="Phase 2: Define" large>
       <Para>
         A user persona was developed from the user research takeaways and
         validated assumptions to represent the user expectations. Referring back
@@ -175,13 +178,10 @@ const StreamNet = () => (
       </Para>
     </ParaWithHeader>
 
-    <div>
+    <ImageWrapper>
       <Para fontSize="md">USER PERSONA</Para>
-      <img
-        alt="user persona"
-        src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5d573585-57c9-4ee6-b7e3-619333bbd2cd/StreamNet_persona.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210706%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210706T134328Z&X-Amz-Expires=86400&X-Amz-Signature=06ceb6980e551cc352bdfba80397c310745a95898a000b83161558428428fbff&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22StreamNet_persona.jpg%22"
-      />
-    </div>
+      <img src="/images/case-study/streamnet-user-persona.jpg" />
+    </ImageWrapper>
 
     <ParaWithHeader>
       <Para>
@@ -193,7 +193,7 @@ const StreamNet = () => (
       </Para>
     </ParaWithHeader>
 
-    <ParaWithHeaderLeft header="Ideation">
+    <ParaWithHeader header="Ideation">
       <Para>
         Through conducting user interviews I was able to identify features that
         would be most useful to include in the app - the primary focus: having a
@@ -222,15 +222,15 @@ const StreamNet = () => (
         research as well as understanding about asthma management) what were the
         essential features that the app would need to have as a MVP.
       </Para>
-    </ParaWithHeaderLeft>
+    </ParaWithHeader>
 
-    <div>
+    <ImageWrapper>
       <Para fontSize="md">USER FLOW</Para>
-      <img
-        alt="user flow"
-        src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4b3b0dd2-b8e3-4cb2-a0c0-595eb6b19fe7/StreamNet_task_flow.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210706%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210706T134756Z&X-Amz-Expires=86400&X-Amz-Signature=746e68cae1c2254ba74684a9916182ca740ace5f97f74b93f762f072c90094f8&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22StreamNet_task_flow.jpg%22"
+      <Lightbox
+        alt="user-flow"
+        src="/images/case-study/streamnet-user-flow.jpg"
       />
-    </div>
+    </ImageWrapper>
 
     <ParaWithHeader>
       I developed the user flow for the sign up/sign in and group stream
@@ -246,13 +246,13 @@ const StreamNet = () => (
       </Para>
     </ParaWithHeader>
 
-    <div>
+    <ImageWrapper>
       <Para fontSize="md">WIREFRAMES</Para>
-      <img
+      <Lightbox
         alt="wireframe"
-        src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5c67610f-7767-4dca-ac64-f65d20247d0e/StreamNet_Wireframes.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210706%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210706T135032Z&X-Amz-Expires=86400&X-Amz-Signature=32b47b0dd8c52721931900967f9281fba7d9080611c89a6a2c39c1595b52c9b1&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22StreamNet_Wireframes.jpg%22"
+        src="/images/case-study/streamnet-wireframes.jpg"
       />
-    </div>
+    </ImageWrapper>
     <ParaWithHeader>
       These wireframes were then converted into low fidelity prototypes in order
       to generate user feedback and test their effectiveness at solving user

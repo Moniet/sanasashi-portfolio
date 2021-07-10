@@ -1,14 +1,15 @@
+/** @jsxImportSource @emotion/react **/
 import CaseStudy, {
   FullWidthImg,
   Para,
   ParaWithHeader,
   ParaCenter,
-  ParaWithHeaderLeft,
   ResponsiveGrid,
   Ul,
   Metadata,
+  ImageWrapper,
 } from '../../components/design-system/CaseStudy'
-import Box from '../../components/helpers/Box'
+import Lightbox from '../../components/helpers/Lightbox'
 
 const Mirror = () => (
   <CaseStudy
@@ -36,14 +37,14 @@ const Mirror = () => (
       categories: ['interaction design ', ' ui design'],
     }}
   >
-    <ParaWithHeader width="min(100%, 500px)" header="Phase 1 : discover" center>
+    <ParaWithHeader header="Phase 1 : discover" large>
       <Para>
         At this stage primary and secondary research was conducted in order to
         gain deeper insights into existing user pain-points based on inquires
         developed from user interviews and competitive analysis.
       </Para>
     </ParaWithHeader>
-    <ParaWithHeaderLeft header="Research">
+    <ParaWithHeader header="Research">
       <Para>
         Goal: <br />
         Learn what existing customers value about shopping online and identify
@@ -61,17 +62,17 @@ const Mirror = () => (
           'Understand existing problems people face when shopping online.',
         ]}
       />
-    </ParaWithHeaderLeft>
+    </ParaWithHeader>
 
-    <ParaWithHeaderLeft header="User interviews:">
-      ESTABLISHING A FOUNDATIONAL UNDERSTANDING OF THE PROBLEM THROUGH USER
-      INTERVIEWS
-    </ParaWithHeaderLeft>
-    <img
-      src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e228a505-1d92-452b-a7f3-50ec73dfae9f/Mirror_user_interviews_for_case_study.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210706%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210706T094608Z&X-Amz-Expires=86400&X-Amz-Signature=10f9217f9a51b72a7e462b13588b620ae4b7c3df11c9e2a711b0441a167e8886&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Mirror_user_interviews_for_case_study.jpg%22"
-      alt=""
-    />
-
+    <ImageWrapper>
+      <ParaWithHeader header="User interviews:">
+      <Para>
+          ESTABLISHING A FOUNDATIONAL UNDERSTANDING OF THE PROBLEM THROUGH USER
+          INTERVIEWS
+        </Para>
+      </ParaWithHeader>
+      <img src="/images/case-study/mirror-user-interviews.jpeg" alt="" />
+    </ImageWrapper>
     <ParaWithHeader>
       I interviewed 4 participants to hear first hand their stories of how they
       use the service and what role it plays in their lives. Conducting 1:1
@@ -83,16 +84,16 @@ const Mirror = () => (
       where site visitors and site subscribers spend most of their time helped
       in identifying features that required iteration.
     </ParaWithHeader>
-    <ParaWithHeaderLeft header="Comparative and Competitive research:">
-      <Para>
-        FOR IDENTIFYING THE STRENGTHS, WEAKENESSES AND OPPORUNITY AREAS OF THE
-        CURRENT MARKET COMPETITIVE ANALYSIS WAS CARRIED OUT
-      </Para>
-    </ParaWithHeaderLeft>
-    <img
-      src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e73ac098-351a-4af5-9517-a27a3ee931ea/Mirror_competitive.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210706%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210706T095051Z&X-Amz-Expires=86400&X-Amz-Signature=66831df43719f25be41890cb10d816a25c20090c2361af0054be8e99726b51fa&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Mirror_competitive.jpg%22"
-      alt=""
-    />
+    <ImageWrapper>
+      <ParaWithHeader header="Comparative and Competitive research:">
+        <Para>
+          FOR IDENTIFYING THE STRENGTHS, WEAKENESSES AND OPPORTUNITY AREAS OF
+          THE CURRENT MARKET COMPETITIVE ANALYSIS WAS CARRIED OUT
+        </Para>
+      </ParaWithHeader>
+
+      <Lightbox src="/images/case-study/mirror-competitive.jpg" alt="" />
+    </ImageWrapper>
     <ParaWithHeader>
       <Para>
         I identified strengths and weaknesses of 4 popular shopping websites.
@@ -105,7 +106,7 @@ const Mirror = () => (
       </Para>
     </ParaWithHeader>
 
-    <ParaWithHeaderLeft header="INTERVIEW RESULTS">
+    <ParaWithHeader header="INTERVIEW RESULTS">
       <Para>
         From conducting user interviews, I identified key motivations, needs and
         frustrations of users while shopping online for clothes.
@@ -145,9 +146,9 @@ const Mirror = () => (
           ]}
         />
       </Para>
-    </ParaWithHeaderLeft>
+    </ParaWithHeader>
 
-    <ParaWithHeader header="How might we :" width="100%">
+    <ParaWithHeader header="How might we :">
       <Metadata
         metadata={[
           [
@@ -166,7 +167,7 @@ const Mirror = () => (
       />
     </ParaWithHeader>
 
-    <ParaWithHeader large width="min(100%, 600px)" header="Phase 2 : Define">
+    <ParaWithHeader large header="Phase 2 : Define">
       <Para>
         In order to better represent and empathise with the target users, user
         personas were created from the data collected in the discovery phase and
@@ -177,14 +178,11 @@ const Mirror = () => (
       </Para>
     </ParaWithHeader>
 
-    <div>
+    <ImageWrapper>
       <Para fontSize="md">USER PERSONA</Para>
 
-      <img
-        src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/17d05a09-b19c-425b-8040-857726321273/Mirror_persona.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210706%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210706T102130Z&X-Amz-Expires=86400&X-Amz-Signature=41bace929946649aa64d7ad264fff7b932651c08c481c7a66b9ec4a633a50225&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Mirror_persona.jpg%22"
-        alt=""
-      />
-    </div>
+      <img src="/images/case-study/mirror-user-persona.jpg" alt="" />
+    </ImageWrapper>
     <ParaWithHeader>
       <Para>
         This persona helped in developing potential informed solutions through
@@ -220,13 +218,10 @@ const Mirror = () => (
       reference to the user persona.
     </ParaWithHeader>
 
-    <div>
+    <ImageWrapper>
       <Para fontSize="md">SITEMAP</Para>
-      <img
-        src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/93d6b9aa-1a94-496b-9466-3e7ebba79f17/Mirror_Sitemap.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210706%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210706T102747Z&X-Amz-Expires=86400&X-Amz-Signature=e1e6b21bda507d980d23e6fd10fd8c7daacfee8ee72629cbaa59fcee2cca9dee&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Mirror_Sitemap.jpg%22"
-        alt=""
-      />
-    </div>
+      <Lightbox src="/images/case-study/mirror-sitemap.jpg" alt="" />
+    </ImageWrapper>
     <ParaWithHeader>
       <Para>
         A site map was crucial to lay out the overall structure of the website.
@@ -235,13 +230,10 @@ const Mirror = () => (
       </Para>
     </ParaWithHeader>
 
-    <div>
+    <ImageWrapper>
       <Para fontSize="md">USER FLOW</Para>
-      <img
-        src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3aebfe01-b8a5-4905-ac36-a32addff52ca/User_Flow.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210706%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210706T103116Z&X-Amz-Expires=86400&X-Amz-Signature=6ce75f238f75f45ecfd41e8ffb128ffbfbf339fd56fa9173c6dc6f7bd316f3c7&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22User_Flow.png%22"
-        alt=""
-      />
-    </div>
+      <Lightbox src="/images/case-study/mirror-user-flow.png" alt="" />
+    </ImageWrapper>
     <ParaWithHeader>
       <Para>
         I developed a user flow for the buying process with the persona I'd
@@ -253,21 +245,7 @@ const Mirror = () => (
 
     <hr />
 
-    <ParaWithHeader
-      large
-      width="min(100%, 600px)"
-      header="Phase 3 : Design"
-    ></ParaWithHeader>
-
-    <div>
-      <Para fontSize="md">WIREFRAMES</Para>
-      <img
-        src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/97c0c2c7-7f35-48ec-9f92-baf387db2117/Mirror_wireframes.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210706%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210706T103454Z&X-Amz-Expires=86400&X-Amz-Signature=c2f319a6afad7bf375fbbe82ba0ad7aff8974b3af1f26cdf1ec3c9a60a07be90&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Mirror_wireframes.jpg%22"
-        alt=""
-      />
-    </div>
-
-    <ParaWithHeader>
+    <ParaWithHeader large header="Phase 3 : Design">
       <Para>
         Once I'd identified the key pages that I would be designing, I began
         sketching the pages of the website that I would later translate into
@@ -279,6 +257,11 @@ const Mirror = () => (
         take shape.
       </Para>
     </ParaWithHeader>
+
+    <ImageWrapper>
+      <Para fontSize="md">WIREFRAMES</Para>
+      <Lightbox src="/images/case-study/mirror-wireframes.jpg" alt="" />
+    </ImageWrapper>
 
     <ResponsiveGrid columns={2}>
       <ParaWithHeader header="The Objective">
@@ -329,7 +312,7 @@ const Mirror = () => (
 
     <hr />
 
-    <ParaWithHeader large width="min(100%, 600px)" header="Phase 4 : Test">
+    <ParaWithHeader large header="Phase 4 : Test">
       <Para>
         Once I had finished visual design and creating a prototype (using
         Figma), it was time to put my design to the test. I sought out to do
@@ -346,10 +329,7 @@ const Mirror = () => (
       </Para>
     </ParaWithHeader>
 
-    <img
-      src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/e932ca48-4411-4df4-acca-a62163e3398a/Affinity_Map_mirror.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210706%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210706T103929Z&X-Amz-Expires=86400&X-Amz-Signature=0cec264d7ce77b0c5ccd47bceef95766735e78237dc40f38326611279e5af76f&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Affinity_Map_mirror.jpg%22"
-      alt=""
-    />
+    <Lightbox src="/images/case-study/mirror-affinity-map.jpg" alt="" />
 
     <ParaWithHeader>
       <Para>

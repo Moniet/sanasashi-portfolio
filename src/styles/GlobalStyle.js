@@ -104,6 +104,12 @@ const GlobalStyle = () => {
         .text_small {
           font-size: 0.833rem;
         }
+
+        hr {
+          width: min(100%, 900px);
+          border: none;
+          border-top: solid 1px rgba(255, 255, 255, 0.2);
+        }
       `}
     />
   )

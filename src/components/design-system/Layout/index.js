@@ -12,6 +12,7 @@ const Layout = ({ children, hideNav }) => (
     pb="0px"
     position="relative"
     overflowX="hidden"
+    overflowY="visible"
   >
     {!hideNav && <Nav />}
     {children}

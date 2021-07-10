@@ -1,4 +1,5 @@
 /** @jsxImportSource @emotion/react */
+import styled from '@emotion/styled'
 import Link from 'next/link'
 import Box from '../../helpers/Box'
 import Flex from '../../helpers/Flex'
@@ -9,6 +10,26 @@ import LeftArroww from '../../icons/left-arrow.svg'
 import RightArrowWithCircle from '../../icons/right-arrow-w-circle.svg'
 import Footer from '../Footer'
 import Layout from '../Layout'
+
+export const ImageWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: min(100%, 900px);
+
+  p {
+    align-self: flex-start;
+  }
+`
+
+const Wrapper = styled.div`
+  img {
+    width: min(100%, 900px);
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+`
 
 const dummmyText =
   'aosdfnoaidnfoasnd aisdnf asidn foas nfao sdo andsoafs doifnas odin sadinf aso '
@@ -25,6 +46,9 @@ const MainHeader = ({ children }) => (
 
 export const ResponsiveGrid = ({ children, columns, gridGap }) => (
   <Grid
+    width="min(100%, 900px)"
+    justifyContent="center"
+    mx="auto"
     gridTemplateColumns={[`1fr`, '1fr', `repeat(${columns}, 1fr)`]}
     gridGap={gridGap ? gridGap : ['md', 'md', 'xl']}
   >
@@ -65,9 +89,9 @@ export const ParaWithHeader = (props) => (
   <Flex
     flexDirection={['column', , props.flexDirection]}
     flex="1"
-    width="min(100%, 500px)"
+    width="min(100%, 900px)"
     {...props}
-    mr="auto"
+    // mx="auto"
   >
     {!props.large && <Header {...props}>{props.header}</Header>}
     {props.large && <h1 {...props}>{props.header}</h1>}
@@ -89,7 +113,7 @@ export const ParaWithHeaderLeft = (props) => {
         )}
       </Grid>
       <Grid gridColumn="span 4">
-        <Box width="min(100%, 600px)">{children}</Box>
+        <Box width="min(100%, 900px)">{children}</Box>
       </Grid>
     </ResponsiveGrid>
   )
@@ -97,7 +121,7 @@ export const ParaWithHeaderLeft = (props) => {
 
 export const FullWidthImg = ({ src }) => (
   <Box mx={['-2rem', '-2rem', '-4rem', '-8rem']}>
-    <Box as={'img'} src={src} />
+    <Box as={'img'} src={src} width="100vw !important" />
   </Box>
 )
 
@@ -117,14 +141,15 @@ export const Metadata = ({ metadata = [['key', 'value']] }) => {
         <div key={i}>
           <Flex
             p="sm"
-            width="100%"
+            m="0 auto"
+            width="min(100%, 900px)"
             justifyContent="space-between"
             fontSize="sm"
             css={{ textTransform: 'uppercase' }}
             borderTop="solid 1px"
-            borderTopColor="primary"
+            borderTopColor="rgba(255,255,255,0.2)"
             borderBottom={i === length ? 'solid 1px' : 'none'}
-            borderBottomColor={'text'}
+            borderBottomColor={'rgba(255,255,255,0.2)'}
           >
             <Text color="text" letterSpacing="1px" pb={0} mb={0}>
               {KEY}
@@ -165,110 +190,104 @@ const CaseStudy = ({
   children,
 }) => {
   return (
-    <Layout hideNav>
-      <Flex
-        px={['md', 'md', 'lg', 'xl']}
-        pt={['md', 'md', 'lg', 'xl']}
-        pb={0}
-        width="100%"
-        justifyContent="center"
-        alignItems="center"
-        flexDirection="column"
-      >
-        <Link href="/">
-          <a>
-            <Flex
-              position="absolute"
-              top={[, 'sm', 'sm', , 'md']}
-              left={['md', 'md', 'lg', 'xl']}
-              alignItems="center"
-            >
-              <LeftArroww />{' '}
-              <Text fontSize="xxs" color="text" mb={0} ml={'xs'}>
-                HOME
-              </Text>
-            </Flex>
-          </a>
-        </Link>
-        <Box width={['100%', '', '450px', '500px']} mt={['lg', 'lg', , 0]}>
-          <MainHeader>{header} :</MainHeader>
-          <br />
-          <MainHeader>{description}</MainHeader>
-          <Box pt={['xl', 'lg', , 'xl']} />
-          <Metadata metadata={metadata} />
-
-          <Box pt={['xl', 'lg', , 'xl']} />
-          <Text
-            color="#fff"
-            textAlign="center"
-            mb="sm"
-            fontSize="xs"
-            css={{ opacity: 0.5 }}
-          >
-            INTRODUCTION
-          </Text>
-          <Para textAlign="center" fontSize={['sm', 'sm', '20px']}>
-            {introduction}
-          </Para>
-        </Box>
-      </Flex>
-      <Box position="relative" p={['md', 'md', 'lg', 'xl']}>
-        <MarginProvider mt={['md', 'lg', , 'xl']}>
-          <ResponsiveGrid columns="3">
-            <ParaWithHeader header={'Project Brief'} flexDirection="column">
-              <Para>{projectBrief}</Para>
-            </ParaWithHeader>
-            <ParaWithHeader header={'What I did'} flexDirection="column">
-              <Para>{whatIDid}</Para>
-            </ParaWithHeader>
-            <Flex flexDirection="column" width="100%" alignItems="flex-start">
-              <div>
-                {tags.map((tag, i) => (
-                  <Para key={i} lineHeight={0.75}>
-                    {tag}
-                  </Para>
-                ))}
-              </div>
-            </Flex>
-          </ResponsiveGrid>
-          {children}
-          <Box pt={['md', 'md', , 'lg']} />
-          <Link href={nextCaseStudy.href}>
-            <a
-              css={{
-                textAlign: 'center',
-                textDecoration: 'none',
-                cursor: 'pointer',
-              }}
-            >
-              <Flex flexDirection="column" alignItems="center" color="text">
-                <Text fontSize="xs" color="text" mb="lg">
-                  Next Case
+    <Wrapper>
+      <Layout hideNav>
+        <Flex
+          px={['md', 'md', 'lg', 'xl']}
+          pt={['md', 'md', 'lg', 'xl']}
+          pb={0}
+          width="100%"
+          justifyContent="center"
+          alignItems="center"
+          flexDirection="column"
+        >
+          <Link href="/">
+            <a>
+              <Flex
+                position="absolute"
+                top={[, 'sm', 'sm', , 'md']}
+                left={['md', 'md', 'lg', 'xl']}
+                alignItems="center"
+              >
+                <LeftArroww />{' '}
+                <Text fontSize="xxs" color="text" mb={0} ml={'xs'}>
+                  HOME
                 </Text>
-                <Flex
-                  alignItems="center"
-                  flexDirection={['column', 'column', , , 'row']}
-                >
-                  <Box mr="md">
-                    <Text as="h3" fontSize={['xxl', , 'gigantic']} m={0}>
-                      {nextCaseStudy.header}
-                    </Text>
-                    <Para css={{ textTransform: 'uppercase' }}>
-                      {nextCaseStudy.categories.join('/')}
-                    </Para>
-                  </Box>
-                  <Box width={[, '100px', , , '150px']}>
-                    <RightArrowWithCircle />
-                  </Box>
-                </Flex>
               </Flex>
             </a>
           </Link>
-        </MarginProvider>
-        <Box pt={['md', 0, , 'md', , 'lg']} />
-        <Footer />
-      </Box>
-    </Layout>
+          <Box width="min(100%, 900px)" mt={['lg', 'lg', , 0]}>
+            <MainHeader>{header} :</MainHeader>
+            <br />
+            <MainHeader>{description}</MainHeader>
+            <Box pt={['xl', 'lg', , 'xl']} />
+            <Metadata metadata={metadata} />
+
+            <Box pt={['xl', 'lg', , 'xl']} />
+            <ParaWithHeader header="INTRODUCTION">
+              <Para>{introduction}</Para>
+            </ParaWithHeader>
+          </Box>
+        </Flex>
+        <Box position="relative" p={['md', 'md', 'lg', 'xl']}>
+          <MarginProvider mt={['md', 'lg', , 'xl']}>
+            <ResponsiveGrid columns="2">
+              <ParaWithHeader header={'Project Brief'} flexDirection="column">
+                <Para>{projectBrief}</Para>
+              </ParaWithHeader>
+              <ParaWithHeader header={'What I did'} flexDirection="column">
+                <Para>{whatIDid}</Para>
+              </ParaWithHeader>
+            </ResponsiveGrid>
+
+            <MarginProvider
+              mt={['md', 'lg', , 'xl']}
+              css={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+              }}
+            >
+              {children}
+            </MarginProvider>
+            <Box pt={['md', 'md', , 'lg']} />
+            <Link href={nextCaseStudy.href}>
+              <a
+                css={{
+                  textAlign: 'center',
+                  textDecoration: 'none',
+                  cursor: 'pointer',
+                }}
+              >
+                <Flex flexDirection="column" alignItems="center" color="text">
+                  <Text fontSize="xs" color="text" mb="lg">
+                    Next Case
+                  </Text>
+                  <Flex
+                    alignItems="center"
+                    flexDirection={['column', 'column', , , 'row']}
+                  >
+                    <Box mr="md">
+                      <Text as="h3" fontSize={['xxl', , 'gigantic']} m={0}>
+                        {nextCaseStudy.header}
+                      </Text>
+                      <Para css={{ textTransform: 'uppercase' }}>
+                        {nextCaseStudy.categories.join('/')}
+                      </Para>
+                    </Box>
+                    <Box width={[, '100px', , , '150px']}>
+                      <RightArrowWithCircle />
+                    </Box>
+                  </Flex>
+                </Flex>
+              </a>
+            </Link>
+          </MarginProvider>
+          <Box pt={['md', 0, , 'md', , 'lg']} />
+          <Footer />
+        </Box>
+      </Layout>
+    </Wrapper>
   )
 }
 

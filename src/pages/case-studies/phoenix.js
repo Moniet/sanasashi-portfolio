@@ -1,14 +1,15 @@
 import CaseStudy, {
   FullWidthImg,
   Para,
-  ParaWithHeader,
   ParaCenter,
-  ParaWithHeaderLeft,
+  ParaWithHeader,
   ResponsiveGrid,
   Ul,
   Metadata,
+  ImageWrapper,
 } from '../../components/design-system/CaseStudy'
 import Grid from '../../components/helpers/Grid'
+import Lightbox from '../../components/helpers/Lightbox'
 
 const Phoenix = () => (
   <CaseStudy
@@ -39,7 +40,7 @@ const Phoenix = () => (
       </Para>
     </ParaWithHeader>
 
-    <ParaWithHeaderLeft header="Research">
+    <ParaWithHeader header="Research">
       <Para>
         Goal: <br />
         Phoenix an established manufacturer for Maternal and Neonatal equipment
@@ -58,15 +59,12 @@ const Phoenix = () => (
           'Identify specific key words used when looking for neonatal and maternal products. ',
         ]}
       />
-    </ParaWithHeaderLeft>
+    </ParaWithHeader>
 
-    <div>
+    <ImageWrapper>
       <Para fontSize="md">INTERVIEWS</Para>
-      <img
-        alt=""
-        src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a6a14b90-3a8e-44e7-ab1f-6fd034fe5b29/Phoenix_user_interview.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210706%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210706T120441Z&X-Amz-Expires=86400&X-Amz-Signature=21184cc7a25ac8b3c7f436917a477f8b8c1f93d8add09d58126054114d6f97aa&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Phoenix_user_interview.jpg%22"
-      />
-    </div>
+      <img alt="" src="/images/case-study/phoenix-interviews.jpg" />
+    </ImageWrapper>
 
     <ParaWithHeader>
       <Para>
@@ -93,15 +91,12 @@ const Phoenix = () => (
       </Para>
     </ParaWithHeader>
 
-    <ParaWithHeaderLeft header="Comparative and Competitive research:">
+    <ParaWithHeader header="Comparative and Competitive research:">
       AS TO DISCOVER THE STRENGTHS, WEAKENESSES AND OPPORUNITY AREAS OF THE
       CURRENT MARKET OFFERINGS COMPETITIVE ANALYSIS WAS CARRIED OUT
-    </ParaWithHeaderLeft>
+    </ParaWithHeader>
 
-    <img
-      alt=""
-      src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7314b7a9-688d-4ea6-8063-ef61736e4855/Phoenix_competitive.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210706%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210706T121122Z&X-Amz-Expires=86400&X-Amz-Signature=305217f73fa996202cccbd0004282cb08e2666eea10a15dee8dc81756b34a718&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Phoenix_competitive.jpg%22"
-    />
+    <Lightbox alt="" src="/images/case-study/phoenix-competitive.jpg" />
 
     <ParaWithHeader>
       I carried out secondary research (competitor analysis) by comparing
@@ -114,18 +109,23 @@ const Phoenix = () => (
       common pain points and in turn have a better user experience.
     </ParaWithHeader>
 
-    <ParaWithHeader header="How might we :" width="100%">
-      <Metadata
-        metadata={[
-          ['LEVERAGE AN ONLINE PLATFORM TO ATTRACT USERS AND DRIVE SALES?', ''],
-          ['ENSURE USERS BUILD TRUST IN THE BRAND? ', ''],
-          [
-            'MAKE USERS FEEL THAT THEY HAVE ALL THE INFORMATION THEY NEED ON THE WEBSITE TO MAKE A PURCHSE DECISION? ',
-            '',
-          ],
-        ]}
-      />
-    </ParaWithHeader>
+    <ImageWrapper>
+      <ParaWithHeader header="How might we :" width="100%">
+        <Metadata
+          metadata={[
+            [
+              'LEVERAGE AN ONLINE PLATFORM TO ATTRACT USERS AND DRIVE SALES?',
+              '',
+            ],
+            ['ENSURE USERS BUILD TRUST IN THE BRAND? ', ''],
+            [
+              'MAKE USERS FEEL THAT THEY HAVE ALL THE INFORMATION THEY NEED ON THE WEBSITE TO MAKE A PURCHSE DECISION? ',
+              '',
+            ],
+          ]}
+        />
+      </ParaWithHeader>
+    </ImageWrapper>
 
     <ParaWithHeader header="Phase 2: Define" large>
       <Para>
@@ -135,18 +135,18 @@ const Phoenix = () => (
         informed design decisions are made that align with user goals.
       </Para>
     </ParaWithHeader>
-    <div>
+    <ImageWrapper>
       <Para fontSize="md">USER PERSONA</Para>
-      <img src="/images/case-study/phoenix-nadia.png" />
-    </div>
-    <ParaWithHeaderLeft>
+      <img src="/images/case-study/phoenix-persona.jpg" />
+    </ImageWrapper>
+    <ParaWithHeader>
       <Para>
         During this phase of the design process, a sitemap was created and user
         flows were determined, again informed by research and in constant
         reference to the user persona.
       </Para>
-    </ParaWithHeaderLeft>
-    <ParaWithHeaderLeft header="Ideation">
+    </ParaWithHeader>
+    <ParaWithHeader header="Ideation">
       <Para>
         The goal is to redesign the website to ensure it is relevant and
         accessible with an emphasis on responsive web design, customer journey
@@ -172,15 +172,15 @@ const Phoenix = () => (
           ]}
         />
       </Para>
-    </ParaWithHeaderLeft>
+    </ParaWithHeader>
 
-    <div>
+    <ImageWrapper>
       <Para fontSize="md">BUSINESS MODEL CANVAS</Para>
       <img
         alt="business model canvas"
-        src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/18eca94b-acde-4ebe-9080-9159493a2051/Phoenix_business_model_canvas.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210706%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210706T122503Z&X-Amz-Expires=86400&X-Amz-Signature=25151ce150d729309589a1f7332af0f60a3a1587ad00a4e99da13fcc692baee8&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Phoenix_business_model_canvas.jpg%22"
+        src="/images/case-study/phoenix-business-model.jpg"
       />
-    </div>
+    </ImageWrapper>
 
     <ParaWithHeader>
       <Para>
@@ -190,13 +190,10 @@ const Phoenix = () => (
       </Para>
     </ParaWithHeader>
 
-    <div>
+    <ImageWrapper>
       <Para fontSize="md">SITEMAP</Para>
-      <img
-        alt="sitemap"
-        src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f15104ee-f510-41d1-93bf-228c725d9904/Phoenix_sitemap.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210706%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210706T122545Z&X-Amz-Expires=86400&X-Amz-Signature=301ef248034a38184a87ee66783221ce5d3c96043258183e8a0c40a66bba0044&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Phoenix_sitemap.jpg%22"
-      />
-    </div>
+      <Lightbox alt="sitemap" src="/images/case-study/phoenix-sitemap.jpg" />
+    </ImageWrapper>
 
     <ParaWithHeader>
       <Para>
@@ -205,13 +202,10 @@ const Phoenix = () => (
         layout better.
       </Para>
     </ParaWithHeader>
-    <div>
+    <ImageWrapper>
       <Para fontSize="md">USER FLOW</Para>
-      <img
-        alt="sitemap"
-        src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/130bc324-c420-4650-80f8-b9d574c7e0bd/Phoenix_task_flow.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210706%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210706T122647Z&X-Amz-Expires=86400&X-Amz-Signature=e29a2d45603b72a53f26cf9c1d48a8936927d00de90d2d085e11c9d75f67af6e&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Phoenix_task_flow.jpg%22"
-      />
-    </div>
+      <Lightbox alt="sitemap" src="/images/case-study/phoenix-user-flow.jpg" />
+    </ImageWrapper>
 
     <ParaWithHeader>
       <Para>
@@ -222,10 +216,10 @@ const Phoenix = () => (
     <hr />
 
     <ParaWithHeader header="Phase 3: Design" large></ParaWithHeader>
-    <div>
+    <ImageWrapper>
       <Para fontSize="md">WIREFRAMES</Para>
       <img src="/images/case-study/phoenix-1.png" />
-    </div>
+    </ImageWrapper>
 
     <ParaWithHeader>
       Using the sitemap as a guide, I'd identified key pages that I would be
@@ -269,9 +263,12 @@ const Phoenix = () => (
       design techniques: making the overall website feel modern, high-tech and
       professional.
     </ParaCenter>
+    <ResponsiveGrid column={1} gridGap="md">
+      <img src="/images/case-study/phoenix-7.png" />
 
-    <img src="/images/case-study/phoenix-7.png" />
-    <img src="/images/case-study/phoenix-8.png" />
+      <img src="/images/case-study/phoenix-8.png" />
+    </ResponsiveGrid>
+
     <ParaCenter>
       I was asked to keep Phoenix’s brand color intact. I have therefore used
       the brand’s blue color for highlighting all call-to-action elements and
@@ -286,7 +283,7 @@ const Phoenix = () => (
       the website with minimal text and elements that are spaced out well for a
       better organised layout.
     </ParaCenter>
-    <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c972bd4b-cb02-4601-95f9-e3318e4a1855/Responsive_phoenix.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210706%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210706T123739Z&X-Amz-Expires=86400&X-Amz-Signature=5cb45165374bf76a48517399fbd44fb28883af24c5605d52b2ee20a3b6a4d6eb&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Responsive_phoenix.jpg%22" />
+    <img src="/images/case-study/phoenix-responsive.png" />
 
     <hr />
     <ParaWithHeader header="Phase 4: Test" large>
