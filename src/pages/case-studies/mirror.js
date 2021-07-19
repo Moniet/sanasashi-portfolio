@@ -37,7 +37,7 @@ const Mirror = () => (
       categories: ['interaction design ', ' ui design'],
     }}
   >
-    <ParaWithHeader header="Phase 1 : discover" large>
+    <ParaWithHeader header="Phase 1 : Discover" large>
       <Para>
         At this stage primary and secondary research was conducted in order to
         gain deeper insights into existing user pain-points based on inquires
@@ -66,7 +66,7 @@ const Mirror = () => (
 
     <ImageWrapper>
       <ParaWithHeader header="User interviews:">
-      <Para>
+        <Para>
           ESTABLISHING A FOUNDATIONAL UNDERSTANDING OF THE PROBLEM THROUGH USER
           INTERVIEWS
         </Para>

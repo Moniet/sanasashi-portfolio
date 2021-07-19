@@ -1,5 +1,4 @@
 import Box from '../../helpers/Box'
-import Cursor from '../Cursor'
 import Nav from '../Nav'
 
 const Layout = ({ children, hideNav }) => (

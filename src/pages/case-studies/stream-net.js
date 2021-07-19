@@ -219,8 +219,10 @@ const StreamNet = () => (
       <Para>
         Product Roadmap: <br />
         Given the time constraints of the project, I had to decide (from my user
-        research as well as understanding about asthma management) what were the
-        essential features that the app would need to have as a MVP.
+        research as well as understanding about video streaming platforms) what
+        are the essential features that the app would need to have as an MVP:
+        effectively addressing what problem I am trying to solve and how I plan
+        on doing this.
       </Para>
     </ParaWithHeader>
 

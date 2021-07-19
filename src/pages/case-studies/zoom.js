@@ -128,8 +128,8 @@ const Zoom = () => (
       <Para>
         Based on the developing understanding of the target users via the data
         parsed from the preliminary survey and user interviews, a user persona
-        was created. This aimed at sufficiently representing the
-        ImageWrappererse range of users and their potential needs.
+        was created. This aimed at sufficiently representing the range of users
+        and their potential needs.
       </Para>
     </ParaWithHeader>
     <ParaWithHeader header="Ideation">
