@@ -59,12 +59,14 @@ const Lightbox = ({ src, alt = '' }) => {
         </Flex>
       )}
 
-      <Box
+      <Flex
         position="relative"
         onMouseOver={() => setShowOverlay(true)}
         onMouseLeave={() => setShowOverlay(false)}
         onClick={() => setShow(true)}
         css={{ cursor: 'pointer !important' }}
+        width="100%"
+        justifyContent="center"
       >
         <ImageWrapper>
           <img src={src} alt={alt} />
@@ -95,7 +97,7 @@ const Lightbox = ({ src, alt = '' }) => {
             </Text>
           </Flex>
         )}
-      </Box>
+      </Flex>
     </>
   )
 }
