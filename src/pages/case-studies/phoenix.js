@@ -63,7 +63,7 @@ const Phoenix = () => (
 
     <ImageWrapper>
       <Para fontSize="md">INTERVIEWS</Para>
-      <img alt="" src="/images/case-study/phoenix-interviews.jpg" />
+      <Lightbox alt="" src="/images/case-study/phoenix-interviews.jpg" />
     </ImageWrapper>
 
     <ParaWithHeader>
@@ -137,7 +137,7 @@ const Phoenix = () => (
     </ParaWithHeader>
     <ImageWrapper>
       <Para fontSize="md">USER PERSONA</Para>
-      <img src="/images/case-study/phoenix-persona.jpg" />
+      <Lightbox src="/images/case-study/phoenix-persona.jpg" />
     </ImageWrapper>
     <ParaWithHeader>
       <Para>
@@ -176,7 +176,7 @@ const Phoenix = () => (
 
     <ImageWrapper>
       <Para fontSize="md">BUSINESS MODEL CANVAS</Para>
-      <img
+      <Lightbox
         alt="business model canvas"
         src="/images/case-study/phoenix-business-model.jpg"
       />
@@ -218,7 +218,7 @@ const Phoenix = () => (
     <ParaWithHeader header="Phase 3: Design" large></ParaWithHeader>
     <ImageWrapper>
       <Para fontSize="md">WIREFRAMES</Para>
-      <img src="/images/case-study/phoenix-1.png" />
+      <Lightbox src="/images/case-study/phoenix-1.png" />
     </ImageWrapper>
 
     <ParaWithHeader>
@@ -251,11 +251,11 @@ const Phoenix = () => (
       </ParaWithHeader>
     </ResponsiveGrid>
     <ResponsiveGrid column={1} gridGap="md">
-      <img src="/images/case-study/phoenix-2.png" />
-      <img src="/images/case-study/phoenix-3.png" />
-      <img src="/images/case-study/phoenix-4.png" />
-      <img src="/images/case-study/phoenix-5.png" />
-      <img src="/images/case-study/phoenix-6.png" />
+      <Lightbox src="/images/case-study/phoenix-2.png" />
+      <Lightbox src="/images/case-study/phoenix-3.png" />
+      <Lightbox src="/images/case-study/phoenix-4.png" />
+      <Lightbox src="/images/case-study/phoenix-5.png" />
+      <Lightbox src="/images/case-study/phoenix-6.png" />
     </ResponsiveGrid>
     <ParaCenter>
       As this is a redesign, I wanted to ensure that the layout is designed to
@@ -264,9 +264,9 @@ const Phoenix = () => (
       professional.
     </ParaCenter>
     <ResponsiveGrid column={1} gridGap="md">
-      <img src="/images/case-study/phoenix-7.png" />
+      <Lightbox src="/images/case-study/phoenix-7.png" />
 
-      <img src="/images/case-study/phoenix-8.png" />
+      <Lightbox src="/images/case-study/phoenix-8.png" />
     </ResponsiveGrid>
 
     <ParaCenter>
@@ -283,7 +283,7 @@ const Phoenix = () => (
       the website with minimal text and elements that are spaced out well for a
       better organised layout.
     </ParaCenter>
-    <img src="/images/case-study/phoenix-responsive.png" />
+    <Lightbox src="/images/case-study/phoenix-responsive.png" />
 
     <hr />
     <ParaWithHeader header="Phase 4: Test" large>

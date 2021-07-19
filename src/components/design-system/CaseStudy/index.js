@@ -13,9 +13,10 @@ import Layout from '../Layout'
 
 export const ImageWrapper = styled.div`
   display: flex;
+  
   align-items: center;
   flex-direction: column;
-  width: min(100%, 900px);
+  width: min(100%, 700px);
 
   p {
     align-self: flex-start;
@@ -24,11 +25,11 @@ export const ImageWrapper = styled.div`
 
 const Wrapper = styled.div`
   img {
-    width: min(100%, 900px);
+    width: min(100%, 700px);
     margin-right: auto;
     margin-left: auto;
     position: relative;
-}
+  }
 `
 
 const dummmyText =
@@ -46,7 +47,7 @@ const MainHeader = ({ children }) => (
 
 export const ResponsiveGrid = ({ children, columns, gridGap }) => (
   <Grid
-    width="min(100%, 900px)"
+    width="min(100%, 700px)"
     justifyContent="center"
     mx="auto"
     gridTemplateColumns={[`1fr`, '1fr', `repeat(${columns}, 1fr)`]}
@@ -89,7 +90,7 @@ export const ParaWithHeader = (props) => (
   <Flex
     flexDirection={['column', , props.flexDirection]}
     flex="1"
-    width="min(100%, 900px)"
+    width="min(100%, 700px)"
     {...props}
     // mx="auto"
   >
@@ -113,7 +114,7 @@ export const ParaWithHeaderLeft = (props) => {
         )}
       </Grid>
       <Grid gridColumn="span 4">
-        <Box width="min(100%, 900px)">{children}</Box>
+        <Box width="min(100%, 700px)">{children}</Box>
       </Grid>
     </ResponsiveGrid>
   )
@@ -142,7 +143,7 @@ export const Metadata = ({ metadata = [['key', 'value']] }) => {
           <Flex
             p="sm"
             m="0 auto"
-            width="min(100%, 900px)"
+            width="min(100%, 700px)"
             justifyContent="space-between"
             fontSize="sm"
             css={{ textTransform: 'uppercase' }}
@@ -216,7 +217,7 @@ const CaseStudy = ({
               </Flex>
             </a>
           </Link>
-          <Box width="min(100%, 900px)" mt={['lg', 'lg', , 0]}>
+          <Box width="min(100%, 700px)" mt={['lg', 'lg', , 0]}>
             <MainHeader>{header} :</MainHeader>
             <br />
             <MainHeader>{description}</MainHeader>

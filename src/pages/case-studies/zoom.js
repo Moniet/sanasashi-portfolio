@@ -66,7 +66,7 @@ const Zoom = () => (
         ESTABLISHING A FOUNDATIONAL UNDERSTANDING OF THE PROBLEM THROUGH USER
         INTERVIEWS
       </ParaWithHeader>
-      <img src="/images/case-study/zoom_user_interview.jpg" />
+      <Lightbox src="/images/case-study/zoom_user_interview.jpg" />
     </ImageWrapper>
 
     <ParaWithHeader>
@@ -114,14 +114,14 @@ const Zoom = () => (
     <hr />
 
     <ParaWithHeader header="Phase 2: Define" large>
-      In order to better validate the need for a feature like this and empatise
+      In order to better validate the need for a feature like this and empathise
       with the target users, I created a user persona with the user expectations
       and pain points.
     </ParaWithHeader>
 
     <ImageWrapper>
       <Para fontSize="md">USER PERSONA</Para>
-      <img src="/images/case-study/zoom_persona.jpg" />
+      <Lightbox src="/images/case-study/zoom_persona.jpg" />
     </ImageWrapper>
 
     <ParaWithHeader>
@@ -175,7 +175,7 @@ const Zoom = () => (
     </ParaWithHeader>
     <ImageWrapper style={{ marginTop: '2rem' }}>
       <Para fontSize="md">WIREFRAMES</Para>
-      <img src="/images/case-study/zoom_wireframes.jpg" />
+      <Lightbox src="/images/case-study/zoom_wireframes.jpg" />
     </ImageWrapper>
 
     <ResponsiveGrid columns={2}>
@@ -196,10 +196,10 @@ const Zoom = () => (
       </ParaWithHeader>
     </ResponsiveGrid>
     <ResponsiveGrid column={1} gridGap="md">
-      <img src="/images/case-study/zoom-2.png" />
-      <img src="/images/case-study/zoom-3.png" />
-      <img src="/images/case-study/zoom-4.png" />
-      <img src="/images/case-study/zoom-5.png" />
+      <Lightbox src="/images/case-study/zoom-2.png" />
+      <Lightbox src="/images/case-study/zoom-3.png" />
+      <Lightbox src="/images/case-study/zoom-4.png" />
+      <Lightbox src="/images/case-study/zoom-5.png" />
     </ResponsiveGrid>
     <ParaCenter>
       Since the goal was to semalessly add a feature, it was important that I
@@ -207,8 +207,8 @@ const Zoom = () => (
       new feature would make the most sense within the given framework.
     </ParaCenter>
 
-    <img src="/images/case-study/zoom-6.png" />
-    <img src="/images/case-study/zoom-7.png" />
+    <Lightbox src="/images/case-study/zoom-6.png" />
+    <Lightbox src="/images/case-study/zoom-7.png" />
 
     <ParaCenter>
       The feature that I had settled upon based off user needs was implementing
@@ -216,7 +216,7 @@ const Zoom = () => (
       how users could schedule a meeting and create a poll and also wanted to
       establish what it would be like to receive a poll request.
     </ParaCenter>
-    <img src="/images/case-study/zoom-8.png" />
+    <Lightbox src="/images/case-study/zoom-8.png" />
 
     <ParaCenter>
       Working on this project taught me how to work within the constraints of an

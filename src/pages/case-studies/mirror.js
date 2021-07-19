@@ -71,7 +71,7 @@ const Mirror = () => (
           INTERVIEWS
         </Para>
       </ParaWithHeader>
-      <img src="/images/case-study/mirror-user-interviews.jpeg" alt="" />
+      <Lightbox src="/images/case-study/mirror-user-interviews.jpeg" alt="" />
     </ImageWrapper>
     <ParaWithHeader>
       I interviewed 4 participants to hear first hand their stories of how they
@@ -181,7 +181,7 @@ const Mirror = () => (
     <ImageWrapper>
       <Para fontSize="md">USER PERSONA</Para>
 
-      <img src="/images/case-study/mirror-user-persona.jpg" alt="" />
+      <Lightbox src="/images/case-study/mirror-user-persona.jpg" alt="" />
     </ImageWrapper>
     <ParaWithHeader>
       <Para>
@@ -280,11 +280,11 @@ const Mirror = () => (
       </ParaWithHeader>
     </ResponsiveGrid>
     <ResponsiveGrid column={1} gridGap="md">
-      <img src="/images/case-study/mirror-3.png" />
-      <img src="/images/case-study/mirror-4.png" />
-      <img src="/images/case-study/mirror-5.png" />
-      <img src="/images/case-study/mirror-6.png" />
-      <img src="/images/case-study/mirror-7.png" />
+      <Lightbox src="/images/case-study/mirror-3.png" />
+      <Lightbox src="/images/case-study/mirror-4.png" />
+      <Lightbox src="/images/case-study/mirror-5.png" />
+      <Lightbox src="/images/case-study/mirror-6.png" />
+      <Lightbox src="/images/case-study/mirror-7.png" />
     </ResponsiveGrid>
     <ParaCenter>
       A minimal layout with a combination of a serif font for headings and sans
@@ -292,8 +292,8 @@ const Mirror = () => (
       of minimal colors and large images also play a key role in achieving an
       overall clean, minimalist layout.
     </ParaCenter>
-    <img src="/images/case-study/mirror-8.png" />
-    <img src="/images/case-study/mirror-9.png" />
+    <Lightbox src="/images/case-study/mirror-8.png" />
+    <Lightbox src="/images/case-study/mirror-9.png" />
 
     <ParaCenter>
       In order for all the colors to harmonise with one another and ensure a
@@ -308,7 +308,7 @@ const Mirror = () => (
       and renders well on all devices. This ensures the brand can tap into the
       online e-commerce market effectively.
     </ParaCenter>
-    <img src="/images/case-study/mirror-responsive.png" />
+    <Lightbox src="/images/case-study/mirror-responsive.png" />
 
     <hr />
 

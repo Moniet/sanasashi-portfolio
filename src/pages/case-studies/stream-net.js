@@ -75,7 +75,7 @@ const StreamNet = () => (
           INTERVIEWS
         </Para>
       </ParaWithHeader>
-      <img src="/images/case-study/streamnet-user-interviews.jpg" />
+      <Lightbox src="/images/case-study/streamnet-user-interviews.jpg" />
     </ImageWrapper>
 
     <ParaWithHeader>
@@ -180,7 +180,7 @@ const StreamNet = () => (
 
     <ImageWrapper>
       <Para fontSize="md">USER PERSONA</Para>
-      <img src="/images/case-study/streamnet-user-persona.jpg" />
+      <Lightbox src="/images/case-study/streamnet-user-persona.jpg" />
     </ImageWrapper>
 
     <ParaWithHeader>
@@ -277,10 +277,10 @@ const StreamNet = () => (
       </ParaWithHeader>
     </ResponsiveGrid>
     <ResponsiveGrid column={1} gridGap="md">
-      <img src="/images/case-study/stream-net-1.png" />
-      <img src="/images/case-study/stream-net-2.png" />
-      <img src="/images/case-study/stream-net-3.png" />
-      <img src="/images/case-study/stream-net-4.png" />
+      <Lightbox src="/images/case-study/stream-net-1.png" />
+      <Lightbox src="/images/case-study/stream-net-2.png" />
+      <Lightbox src="/images/case-study/stream-net-3.png" />
+      <Lightbox src="/images/case-study/stream-net-4.png" />
     </ResponsiveGrid>
     <ParaCenter>
       I built out the UI Design by first thinking about how the content from
@@ -288,9 +288,9 @@ const StreamNet = () => (
       and finally a way to curate a watch list.
     </ParaCenter>
 
-    <img src="/images/case-study/stream-net-5.png" />
-    <img src="/images/case-study/stream-net-6.png" />
-    <img src="/images/case-study/stream-net-7.png" />
+    <Lightbox src="/images/case-study/stream-net-5.png" />
+    <Lightbox src="/images/case-study/stream-net-6.png" />
+    <Lightbox src="/images/case-study/stream-net-7.png" />
 
     <ParaCenter>
       In creating an identity for the solution, I set out to create something
@@ -300,7 +300,7 @@ const StreamNet = () => (
       are highlighted in red.
     </ParaCenter>
 
-    <img src="/images/case-study/stream-net-8.png" />
+    <Lightbox src="/images/case-study/stream-net-8.png" />
     <ParaCenter>
       Discovery research and a clearly framed user problem statement took the
       forefront of my project - validating the need for a product like this. My

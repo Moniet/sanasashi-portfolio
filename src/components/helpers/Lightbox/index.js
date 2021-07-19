@@ -4,6 +4,7 @@ import { useRef, useState } from 'react'
 import { ImageWrapper } from '../../design-system/CaseStudy'
 import Box from '../Box'
 import Flex from '../Flex'
+import Text from '../Text'
 import { useClickOutside } from './useClickOutside'
 
 const fadeIn = keyframes`
@@ -18,6 +19,7 @@ const fadeIn = keyframes`
 const Lightbox = ({ src, alt = '' }) => {
   const [show, setShow] = useState(false)
   const container = useRef(null)
+  const [showOverlay, setShowOverlay] = useState(false)
 
   const onClickOutside = () => setShow(false)
   useClickOutside({
@@ -57,12 +59,43 @@ const Lightbox = ({ src, alt = '' }) => {
         </Flex>
       )}
 
-      <ImageWrapper
+      <Box
+        position="relative"
+        onMouseOver={() => setShowOverlay(true)}
+        onMouseLeave={() => setShowOverlay(false)}
         onClick={() => setShow(true)}
         css={{ cursor: 'pointer !important' }}
       >
-        <img src={src} alt={alt} />
-      </ImageWrapper>
+        <ImageWrapper>
+          <img src={src} alt={alt} />
+        </ImageWrapper>
+
+        {showOverlay && (
+          <Flex
+            position="absolute"
+            top={0}
+            left={0}
+            width="100%"
+            height="100%"
+            alignItems="center"
+            justifyContent="center"
+            css={{
+              animation: `${fadeIn} 0.2s ease forwards`,
+              backdropFilter: 'blur(5px)',
+              backgroundColor: 'rgba(0,0,0,0.6)',
+            }}
+          >
+            <Text
+              color="text"
+              m="auto"
+              fontWeight="400"
+              css={{ textDecoration: 'underline' }}
+            >
+              click to view
+            </Text>
+          </Flex>
+        )}
+      </Box>
     </>
   )
 }
