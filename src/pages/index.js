@@ -13,7 +13,18 @@ export default function Home() {
   const sliderProps = useSlider()
 
   return (
-    <Layout>
+    <Box
+      bg="bg"
+      width="min(100vw, 1400px)"
+      height="100vh"
+      mx="auto"
+      p={['md', 'md', '65px']}
+      pb="0px"
+      position="relative"
+      overflowX="hidden"
+      overflowY="visible"
+    >
+      <Nav />
       <Head>
         <title>Sanjana Sashikumar | UX Designer</title>
       </Head>
@@ -51,6 +62,6 @@ export default function Home() {
           <SliderControls {...sliderProps} />
         </Box>
       </Flex>
-    </Layout>
+    </Box>
   )
 }
