@@ -13,7 +13,6 @@ import Layout from '../Layout'
 
 export const ImageWrapper = styled.div`
   display: flex;
-  
   align-items: center;
   flex-direction: column;
   width: min(100%, 700px);
@@ -194,9 +193,7 @@ const CaseStudy = ({
     <Wrapper>
       <Layout hideNav>
         <Flex
-          px={['md', 'md', 'lg', 'xl']}
-          pt={['md', 'md', 'lg', 'xl']}
-          pb={0}
+          pb={['md', 'md', 'lg', 'xl']}
           width="100%"
           justifyContent="center"
           alignItems="center"
@@ -230,7 +227,7 @@ const CaseStudy = ({
             </ParaWithHeader>
           </Box>
         </Flex>
-        <Box position="relative" p={['md', 'md', 'lg', 'xl']}>
+        <Box position="relative">
           <MarginProvider mt={['md', 'lg', , 'xl']}>
             <ResponsiveGrid columns="2">
               <ParaWithHeader header={'Project Brief'} flexDirection="column">

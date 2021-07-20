@@ -4,17 +4,18 @@ import Nav from '../Nav'
 const Layout = ({ children, hideNav }) => (
   <Box
     bg="bg"
-    width="min(100vw, 1400px)"
     height="100vh"
-    mx="auto"
+    width="100%"
     p={['md', 'md', '65px']}
     pb="0px"
     position="relative"
     overflowX="hidden"
     overflowY="visible"
   >
-    {!hideNav && <Nav />}
-    {children}
+    <Box width={'min(100%, 1400px)'} mx="auto">
+      {!hideNav && <Nav />}
+      {children}
+    </Box>
   </Box>
 )
 
