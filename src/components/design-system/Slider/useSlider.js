@@ -3,7 +3,7 @@ import { useState } from 'react'
 const sliderItems = [
   {
     imageLink: '/images/slider/p1.png',
-    mobileImageLink: '/images/slider/p1-mobile.png',
+    mobileImageLink: '/images/slider/p1.png',
     projectLink: '/case-studies/mirror',
     title: 'Mirror',
     category: 'Website Re-design',
@@ -14,7 +14,7 @@ const sliderItems = [
     year: '2021',
     category: 'Responsive Re-design',
     imageLink: '/images/slider/p2.png',
-    mobileImageLink: '/images/slider/p2-mobile.png',
+    mobileImageLink: '/images/slider/p2.png',
     projectLink: '/case-studies/phoenix',
   },
   {
@@ -22,7 +22,8 @@ const sliderItems = [
     year: '2021',
     category: 'App MVP  design',
     imageLink: '/images/case-study/stream-net-1.png',
-    mobileImageLink: '/images/slider/p3-mobile.png',
+    mobileImageLink: '/images/case-study/stream-net-1.png',
+
     projectLink: '/case-studies/stream-net',
   },
   {
@@ -30,7 +31,7 @@ const sliderItems = [
     year: '2021',
     category: 'Website Re-design',
     imageLink: '/images/case-study/zoom-2.png',
-    mobileImageLink: '/images/slider/p4-mobile.png',
+    mobileImageLink: '/images/case-study/zoom-2.png',
     projectLink: '/case-studies/zoom',
   },
 ]

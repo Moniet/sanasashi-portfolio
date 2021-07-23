@@ -90,7 +90,7 @@ const SliderImage = ({
     >
       <Flex
         position="relative"
-        width={['300px', '100vw', '400px', '500px']}
+        width={['calc(100vw - 4rem)', 'calc(100vw - 4rem)', '400px', '500px']}
         color="text"
         justifyContent="center"
       >
@@ -103,15 +103,9 @@ const SliderImage = ({
           zIndex="10"
           ref={overlay}
         />
-        <Box as="picture">
-          <Img
-            as="source"
-            srcSet={imageLink}
-            ref={image}
-            media={'(min-width: 768px)'}
-          />
-          <Img src={mobileImageLink} />
-        </Box>
+
+        <Img src={imageLink} />
+
         <Tags tags={tags} hovering={hovering} />
       </Flex>
       <Flex

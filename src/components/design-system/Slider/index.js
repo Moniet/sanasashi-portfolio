@@ -1,4 +1,5 @@
 /** @jsxImportSource @emotion/react */
+import { useRouter } from 'next/router'
 import { margin } from 'styled-system'
 import styled from '@emotion/styled'
 import {
@@ -15,7 +16,7 @@ import Spacer from '../../helpers/Spacer'
 import Box from '../../helpers/Box'
 import Swipe from '../../helpers/Swipe'
 import Text from '../../helpers/Text'
-import { useRouter } from 'next/router'
+import { ResponsiveGrid } from '../CaseStudy'
 
 const Container = styled(Flex)`
   position: relative;
@@ -35,6 +36,12 @@ const SliderContainer = styled(Box)`
   transition: transform 0.5s ease;
   position: relative;
   transform: translateX(0px);
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    transform: translateX(0px);
+    margin-top: 0;
+  }
 
   & > * + * {
     ${margin}
@@ -132,7 +139,7 @@ const Slider = ({ count, sliderItems, setCount }) => {
   const container = useRef(null)
   const [mounted, setMounted] = useState(false)
   const [scrollWidth, setScrollWidth] = useState(0)
-  const isMobile = useMediaQuery('(max-width: 500px)')
+  const isMobile = useMediaQuery('(max-width: 767px)')
   const router = useRouter()
   const [mouseOverProjectIndex, setMouseOverProjectIndex] = useState(0)
 
@@ -146,6 +153,18 @@ const Slider = ({ count, sliderItems, setCount }) => {
     setScrollWidth(container.current?.scrollWidth)
   }, [mounted])
 
+  useEffect(() => {
+    let timer
+
+    window.addEventListener('resize', () => {
+      clearTimeout(timer)
+      timer = setTimeout(() => {
+        setScrollWidth(container.current?.scrollWidth)
+        setCount(0)
+      }, 100)
+    })
+  }, [])
+
   const onSwipeLeft = () => {
     prevCount.current = count
     count + 1 < sliderItems.length && setCount(count + 1)
@@ -158,14 +177,23 @@ const Slider = ({ count, sliderItems, setCount }) => {
 
   const prevCount = useRef(0)
 
-  console.log(isMobile)
-
   useEffect(() => {
     const left = imageWidth * count
-    container.current.style.transform = isMobile
-      ? `translateX(${142 + 100 * count * (count == 0 ? 1 : -1)}vw)`
-      : `translateX(${-1 * left + 40}px)`
+    if (container.current) {
+      container.current.style.transform = isMobile
+        ? `translateX(${left}px)`
+        : `translateX(${-1 * left + 40}px)`
+    }
   }, [count])
+
+  useEffect(() => {
+    if (isMobile) {
+      setCount(0)
+      container.current.style.transform = `translateX(0px)`
+    } else {
+      setScrollWidth(container.current?.scrollWidth)
+    }
+  }, [isMobile])
 
   useEffect(() => {
     setMounted(true)
@@ -182,7 +210,11 @@ const Slider = ({ count, sliderItems, setCount }) => {
       }
     >
       <Container>
-        <SliderContainer ref={container} ml={[0, 0, '3rem', 'xl']}>
+        <SliderContainer
+          ref={container}
+          ml={[0, 0, '6rem', 'xl']}
+          mt={['lg', 'lg', 0]}
+        >
           {sliderItems.map((item, i) => (
             <SliderImage
               index={i}

@@ -14,22 +14,35 @@ const About = () => (
       width="100%"
       height="100%"
       pt={['xl', 'xl', 'xl']}
-      px={['0', '0', 'xl']}
+      px={['0', '0', '0', 'lg', 'xl']}
       flexDirection="column"
     >
-      <Flex flexDirection={['column', 'column', 'row']}>
-        <Flex mr="lg" flex="4">
+      <Flex flexDirection={['column', 'column', , 'row']}>
+        <Flex
+          mr={[0, 0, 0, 'lg']}
+          flex="4"
+          justifyContent={['center', 'center', , 'start']}
+        >
           <Text
             as="h1"
-            fontSize={['xl', 'xxl', 'gigantic']}
-            textAlign={['left', 'left', 'right']}
+            fontSize={['xl', 'xl', 'xxl', 'gigantic']}
+            textAlign={['center', 'center', , 'right']}
           >
-            ABOUT <br />
-            ME
+            ABOUT ME
           </Text>
         </Flex>
-        <Flex flex="6" flexDirection="column">
-          <Text as="div" lineHeight="2.5" fontSize={['xs', 'xs', 'inherit']}>
+        <Flex
+          flex="6"
+          flexDirection="column"
+          width="min(100%, 600px)"
+          mx="auto"
+        >
+          <Text
+            as="div"
+            lineHeight={['1.5', '1.5', , '2', '2.5']}
+            textAlign={['center', , , 'left']}
+            fontSize={['xs', 'xs', 'inherit']}
+          >
             <Text>Hey there! Thank you for being here!</Text>
             <Text>
               I am Sana Sashi – a UX designer with a passion to develop better
@@ -52,8 +65,8 @@ const About = () => (
         </Flex>
       </Flex>
     </Flex>
-    <Box pt={['xl', 'xl', 0]} />
-    <Footer px={[0, 0, 'xl']} pt="0" />
+
+    <Footer px={[0, 0, , 'xl']} mt={['0', '0', 'xl', 0]} />
   </Layout>
 )
 

@@ -1,3 +1,5 @@
+/** @jsxImportSource @emotion/react */
+import { useMediaQuery } from 'beautiful-react-hooks'
 import Head from 'next/head'
 import Box from '../components/helpers/Box'
 import Nav from '../components/design-system/Nav'
@@ -11,6 +13,7 @@ import { useSlider } from '../components/design-system/Slider/useSlider'
 
 export default function Home() {
   const sliderProps = useSlider()
+  const isMobile = useMediaQuery('(max-width: 767px)')
 
   return (
     <Box
@@ -40,28 +43,36 @@ export default function Home() {
           flexDirection="column"
           minWidth={['auto', 'auto', '200px', '250px']}
         >
-          <Text fontSize="xs" mb={0} textAlign={['center', 'center', 'left']}>
+          <Text
+            fontSize={['sm', 'sm', , 'xs']}
+            mb={0}
+            textAlign={['center', 'center', 'left']}
+          >
             I’m a UX Designer crafting User-Centric products through Minimal,
             Effective and Inclusive design.{' '}
           </Text>
         </Flex>
         <Box mt={['xl', 'xl', '65px']} />
         <Flex
-          pl={(0, 0, 0, 'sm', 'md', 'lg')}
+          pl={[0, 0, 'md', , 'lg']}
           height={['auto', 'auto', 1]}
           position="relative"
           alignItems="center"
         >
           <Slider {...sliderProps} />
         </Flex>
-        <Box
-          position={['relative', 'relative', 'absolute']}
-          bottom={['sm', 'sm', 'lg']}
-          right={[1 / 2, 1 / 2, '65px']}
-        >
-          <SliderControls {...sliderProps} />
-        </Box>
+        {!isMobile && (
+          <Box
+            position={['relative', 'relative', 'absolute']}
+            bottom={['sm', 'sm', 'lg']}
+            right={[1 / 2, 1 / 2, '65px']}
+          >
+            <SliderControls {...sliderProps} />
+          </Box>
+        )}
       </Flex>
+
+      {isMobile && <Footer />}
     </Box>
   )
 }
