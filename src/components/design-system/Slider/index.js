@@ -166,13 +166,17 @@ const Slider = ({ count, sliderItems, setCount }) => {
   }, [])
 
   const onSwipeLeft = () => {
-    prevCount.current = count
-    count + 1 < sliderItems.length && setCount(count + 1)
+    if (!isMobile) {
+      prevCount.current = count
+      count + 1 < sliderItems.length && setCount(count + 1)
+    }
   }
 
   const onSwipeRight = () => {
-    prevCount.current = count
-    count - 1 >= 0 && setCount(count - 1)
+    if (!isMobile) {
+      prevCount.current = count
+      count - 1 >= 0 && setCount(count - 1)
+    }
   }
 
   const prevCount = useRef(0)
