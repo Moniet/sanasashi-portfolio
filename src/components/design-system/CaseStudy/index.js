@@ -57,7 +57,7 @@ export const ResponsiveGrid = ({ children, columns, gridGap }) => (
 )
 
 export const Para = (props) => (
-  <Text fontSize={['xs', 'xs', 'sm']} color="text" {...props}>
+  <Text fontSize="sm" color="text" {...props}>
     {props.children}
   </Text>
 )
