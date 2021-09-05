@@ -47,6 +47,7 @@ export default function Home() {
             fontSize={['sm', 'sm', , 'xs']}
             mb={0}
             textAlign={['center', 'center', 'left']}
+            css={{ userSelect: 'none' }}
           >
             I’m a UX Designer crafting User-Centric products through Minimal,
             Effective and Inclusive design.{' '}

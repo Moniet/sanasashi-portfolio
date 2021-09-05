@@ -2,6 +2,7 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import { themeGet } from '@styled-system/theme-get'
+import { useMediaQuery } from 'beautiful-react-hooks'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useRef, useState } from 'react'
@@ -67,32 +68,36 @@ const SliderImage = ({
   year = '2021',
   tags = ['UX Research', 'Wireframing', 'UI Design'],
   index,
-  count,
-  prevCount,
   mouseOverProjectIndex = () => {},
 }) => {
-  const image = useRef(null)
   const overlay = useRef(null)
   const [hovering, setHovering] = useState(false)
-  const shouldHandleClick = count === prevCount
   const router = useRouter()
 
-  const handleMouseOver = () => {
+  const handleMouseOver = (e) => {
+    e.stopPropagation()
     setHovering(true)
+  }
+
+  const handleClick = (e) => {
+    e.stopPropagation()
     mouseOverProjectIndex(index)
+    router.push(projectLink)
   }
 
   return (
     <Box
       position="relative"
-      onMouseOver={() => handleMouseOver()}
+      onMouseOver={(e) => handleMouseOver(e)}
       onMouseLeave={() => setHovering(false)}
+      onClick={(e) => handleClick(e)}
     >
       <Flex
         position="relative"
         width={['calc(100vw - 4rem)', 'calc(100vw - 4rem)', '400px', '500px']}
         color="text"
         justifyContent="center"
+        css={{ userSelect: 'none' }}
       >
         <Box
           position="absolute"
@@ -115,7 +120,13 @@ const SliderImage = ({
         alignItems="center"
         height={['50px', '80px', 'auto']}
       >
-        <Text color="text" fontSize="xxs" p={0} m={0} css={{ flex: '1' }}>
+        <Text
+          color="text"
+          fontSize="xxs"
+          p={0}
+          m={0}
+          css={{ flex: '1', userSelect: 'none' }}
+        >
           {index + 1 < 10 ? `0${index + 1}` : index} - {category}
         </Text>
         <Text
@@ -127,6 +138,7 @@ const SliderImage = ({
             textTransform: 'uppercase',
             verticalAlign: 'middle',
             flex: '1',
+            userSelect: 'none',
           }}
         >
           {title}
@@ -140,7 +152,9 @@ const SliderImage = ({
         css={{ writingMode: 'vertical-lr' }}
         display={['none', 'none', 'block']}
       >
-        <Text fontSize="0.6rem">{year}</Text>
+        <Text fontSize="0.6rem" css={{ userSelect: 'none' }}>
+          {year}
+        </Text>
       </Box>
     </Box>
   )

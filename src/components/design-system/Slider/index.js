@@ -167,19 +167,21 @@ const Slider = ({ count, sliderItems, setCount }) => {
 
   const onSwipeLeft = () => {
     if (!isMobile) {
-      prevCount.current = count
-      count + 1 < sliderItems.length && setCount(count + 1)
+      const nextCount = count + 1
+      const shouldSlide = nextCount < sliderItems.length
+
+      shouldSlide && setCount(nextCount)
     }
   }
 
   const onSwipeRight = () => {
     if (!isMobile) {
-      prevCount.current = count
-      count - 1 >= 0 && setCount(count - 1)
+      const prevCount = count - 1
+      const shouldSlide = count >= 1
+
+      shouldSlide && setCount(prevCount)
     }
   }
-
-  const prevCount = useRef(0)
 
   useEffect(() => {
     const left = imageWidth * count
@@ -204,15 +206,7 @@ const Slider = ({ count, sliderItems, setCount }) => {
   }, [])
 
   return (
-    <Swipe
-      onSwipeLeft={onSwipeLeft}
-      onSwipeRight={onSwipeRight}
-      onClick={() =>
-        router.push(
-          sliderItems[isMobile ? count : mouseOverProjectIndex].projectLink
-        )
-      }
-    >
+    <Swipe onSwipeLeft={onSwipeLeft} onSwipeRight={onSwipeRight}>
       <Container>
         <SliderContainer
           ref={container}
@@ -224,7 +218,6 @@ const Slider = ({ count, sliderItems, setCount }) => {
               index={i}
               count={count}
               {...item}
-              prevCount={prevCount.current}
               mouseOverProjectIndex={setMouseOverProjectIndex}
               key={i}
             />
